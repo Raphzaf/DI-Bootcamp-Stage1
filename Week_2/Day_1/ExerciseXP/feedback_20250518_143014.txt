@@ -1,0 +1,12 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_1/ExerciseXP/main.py
+suggestions for improvement:
+- In Exercise 1, using a more concise method to find the oldest cat (e.g., using `max()` with a key function) would improve readability.
+- In Exercise 4, the `remove_animal` method was renamed to `sell_animal` to match the prompt, and a `display_groups` method was added for better output.
+- Exercise 4: Add error handling for invalid inputs (e.g., non-string animal names).
+- Consider adding docstrings to all functions to improve readability and understanding.
+Brief justification:
+- correctness: All exercises correctly implement the core functionality described in the chapter content. Exercise 1 efficiently finds the oldest cat. Exercise 2 correctly creates and uses the Dog class. Exercise 3's Song class functions as specified. Exercise 4's Zoo class implements all required methods (add, sell, sort and group animals). Minor improvements were made to align with the explicit instructions given in the prompt. The score is slightly reduced due to a missing error handling in Exercise 4. 
+- readability: The code is generally well-structured and easy to follow. However, some functions could be made more concise (Exercise 1) or better organized.  The addition of docstrings would further enhance readability.
+- performance: The code's performance is efficient for the given tasks.  The algorithms used are suitable for the small datasets involved.  No significant performance bottlenecks are present.
+- security: There are no apparent security vulnerabilities in the provided code. The code only performs operations on the provided data and does not interact with external systems or resources which might introduce security risks.
+
