@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_2/ExerciseXP/main.py
+suggestions for improvement:
+- In Exercise 1, the `Pet` class could benefit from more robust error handling.  What if the `animals` list is empty or contains non-Cat objects? Consider adding checks and raising exceptions for invalid input.
+- In Exercise 1, add a `sing` method to the `Siamese` class to demonstrate polymorphism more effectively, as suggested in the instructions.
+- In Exercise 3, the `play` method's docstring could be clearer and more concise.  Something like:  '''Allows a PetDog to play with other dogs. Takes a variable number of Dog objects as arguments.'''
+- Exercise 4's `check_majority` method could improve its error handling. Instead of just printing 'Person not found', it could raise a more informative exception or return a boolean indicating success or failure. This allows for better control flow in other parts of the code that might call this method.
+- Overall, the code style could be slightly improved by adding more consistent spacing and perhaps some docstrings to clarify the purpose of methods.
+Correctness: 95%
+-----
