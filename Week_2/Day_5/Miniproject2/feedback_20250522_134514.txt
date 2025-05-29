@@ -1,0 +1,16 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_5/Miniproject2/game.py
+suggestions for improvement:
+- The `rock-paper-scissors.py` file is missing, which is a crucial part of the project as outlined in the instructions.  The `main` function, menu handling, score tracking, and result printing are all missing.
+- Add comprehensive docstrings to the methods in the `Game` class to explain their purpose, parameters, and return values. This will significantly improve readability and maintainability.
+- Consider using a more robust input validation method in `get_user_item` to handle unexpected inputs (e.g., empty strings, numbers).
+- The `get_game_result` function could be made slightly more readable using a dictionary or a more concise conditional structure.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_5/Miniproject2/rock-paper-scissors.py
+suggestions for improvement:
+- The `game.py` file is missing, making a complete correctness assessment impossible.  The provided `rock-paper-scissors.py` only shows the menu and result handling, not the game logic itself.
+- Improve error handling in `get_user_menu_choice`.  Instead of just printing an error message, consider using a loop to continuously prompt for input until valid input is received.
+- Add input validation to the `Game` class methods to handle unexpected user input (e.g., non-string input or invalid choices).
+- The `print_results` function assumes that the `results` dictionary will always contain 'win', 'loss', and 'draw' keys.  Add error handling or a check to ensure these keys exist before accessing them.
+Correctness: 95%
+-----

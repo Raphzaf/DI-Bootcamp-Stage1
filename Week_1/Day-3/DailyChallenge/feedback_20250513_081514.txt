@@ -1,0 +1,11 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_1/Day-3/DailyChallenge/main.py
+suggestions for improvement:
+- In Challenge 1, add error handling for non-string inputs.  The current code will crash if the user inputs something that isn't a word.
+- In Challenge 2,  add more robust error handling for malformed price strings in `items_purchase`.  What if a price is missing a dollar sign, or contains unexpected characters?
+- In Challenge 2,  Consider using a more descriptive variable name than `wallet_amount` (e.g., `available_funds`).
+Brief justification:
+- correctness: Challenge 1's code correctly generates the letter index dictionary as specified in the chapter content.  Challenge 2's code accurately identifies and sorts affordable items.  It handles the 'Nothing' case correctly. The minor deduction is due to a lack of comprehensive error handling.
+- readability: The code is generally well-structured and easy to follow.  Variable names are mostly clear. However, more descriptive variable names and comments would improve readability.  Adding error handling would also improve readability by making the code's behavior more predictable and understandable.
+- performance: The code's performance is efficient for the given task. The algorithms used (iteration, dictionary lookups) have good time complexity. There are no obvious performance bottlenecks.
+- security: There are no apparent security vulnerabilities in this code. It doesn't interact with external systems or handle user input in a way that could create security risks. The security score is high because the code only deals with simple string and numerical manipulations.
+

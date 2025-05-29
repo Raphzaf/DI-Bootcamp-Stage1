@@ -1,0 +1,14 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_4/DailyChallenge/main.py
+suggestions for improvement:
+- The `word_frequency` method could be improved to handle edge cases like empty strings or strings with only punctuation more robustly.
+- The `most_common_word` method could handle ties in word frequencies more gracefully.
+- The `remove_stop_words` method should convert the input text to lowercase before splitting it for consistency with other methods.
+- Add more comprehensive error handling to the `from_file` method, checking for file existence and handling potential `IOError` exceptions.
+- Consider using a more efficient data structure for `most_common_word`, such as `collections.Counter`, for larger texts.
+- Document the class and methods using docstrings to improve readability and understanding.
+Brief justification:
+- correctness: The code implements all the required classes and methods as specified in the chapter content. The `Text` class accurately performs text analysis tasks, including word frequency counting, identification of the most common word, and extraction of unique words. The `TextModification` class successfully performs text cleaning operations, such as removing punctuation, stop words, and special characters.  Minor improvements in edge case handling are suggested to reach 100%.
+- readability: The code is generally well-structured and easy to follow.  Variable names are descriptive, and the logic is straightforward. However, adding docstrings would significantly enhance readability and understanding.  The use of list comprehensions in `remove_stop_words` is efficient and readable.
+- performance: The performance is acceptable for small to medium-sized texts. However, the `most_common_word` method could be optimized for larger texts by using a more efficient data structure like `collections.Counter`.  The current approach of iterating through the words multiple times can be inefficient. For extremely large files, loading the entire file into memory might be a problem; consider processing the file line by line.
+- security: The code doesn't have any obvious security vulnerabilities.  The file handling in `from_file` uses a `with` statement, ensuring proper file closure. No user-supplied input is directly used in a way that would introduce security risks.
+
