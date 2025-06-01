@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/DailyChallenge/script.js
+suggestions for improvement:
+- The `cloneGroceries` function could include more explicit comments explaining the observations about pass-by-value vs. pass-by-reference.
+- The use of `'20$'` and `'35$'` for totalPrice is slightly unconventional.  Consider using a numerical value (20, 35) and adding the '$' sign during output if necessary for display purposes.
+- Add a more descriptive log message when logging the user variable in `cloneGroceries` to avoid ambiguity
+Correctness: 95%
+-----
