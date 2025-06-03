@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_2/DailyChallenge/main.js
+suggestions for improvement:
+- The code could be improved by using CSS classes for moon positioning instead of inline styles. This would enhance maintainability and separation of concerns.
+- Add error handling in case the selector '.listPlanets' does not find the element.  This would prevent unexpected behavior.
+- Consider adding a descriptive comment explaining the purpose of the `110 + i * 35` calculation in the moon positioning.
+Correctness: 95%
+-----
