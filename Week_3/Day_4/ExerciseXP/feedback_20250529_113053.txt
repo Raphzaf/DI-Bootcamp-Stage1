@@ -1,0 +1,79 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise1/script.js
+suggestions for improvement:
+- Add comments explaining the predicted values of 'a' for each function, as instructed in Exercise 1.
+- For Exercise 1, explicitly address what would happen if `let` was replaced with `const` in each example.  The comments should clearly explain the resulting errors or behavior changes.
+- In Exercise 1, the code should be organized in a single JS file, rather than separate snippets.  This makes it easier to assess and run the code as a whole.
+- Exercise 2 is missing.  The code should include the creation of an arrow function `winBattle`, the ternary operator assignment to `experiencePoints`, and the `console.log` statement.
+- Exercises 3, 4, 5, 6, 7, and 8 are missing. The code provided only addresses part of Exercise 1.
+- Improve variable naming. Using 'a' repeatedly makes the code hard to read. More descriptive names would improve readability (e.g.,  `funcOneVariable`, `funcTwoGlobalVariable` etc.)
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise2/script.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise3/script.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise4/script.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise5/script.js
+suggestions for improvement:
+- Add a comment explaining the difference between function declaration and function expression in Exercise 5.  The current code lacks this requested comment.
+- Consider adding input validation to the `kgToGrams` functions to handle non-numeric inputs gracefully.  For example, check if the input is a number using `typeof kg === 'number'` and return an appropriate message or value if not.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise6/index.html
+suggestions for improvement:
+- In Exercise 1, add comments explaining the predictions for each section (1.2, 2.2, 4.2, 5.2).  The instructions explicitly request these comments.
+- In Exercise 7, the instructions mention adding a profile picture. The provided solution lacks this aspect.
+- Exercise 8, Part II could be improved by using a loop to add ingredients instead of repeatedly calling `addIngredients`. This would be more efficient and readable for a larger number of ingredients.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise6/script.js
+suggestions for improvement:
+- The code could be improved by adding error handling for the case where the 'fortune' div is not found in the DOM.  A conditional check or a `try...catch` block could be used.
+- Adding comments to explain the purpose of the self-invoking function and its arguments would enhance readability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise7/index.html
+suggestions for improvement:
+- Exercise 1: Add explanations to your predictions, as requested in the instructions.  The comments should clearly state *why* you predict a certain value for 'a' in each scenario. Include consideration of variable hoisting and scope.
+- Exercise 1:  For questions that ask what happens when `let` is replaced with `const`, explicitly state the error that occurs (e.g., 'Assignment to constant variable').
+- Exercise 7:  The provided code lacks the `script.js` file which is referenced.  The JSON should contain the code for `script.js` to completely assess the correctness of Exercise 7.
+- Exercise 7: The instructions ask to create a profile picture; it's missing in the provided HTML. The `script.js` file should dynamically add an `img` tag with a suitable source (placeholder or user-provided).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise7/script.js
+suggestions for improvement:
+- The exercise specifies a self-invoking function that takes the username as an argument and adds a div to the navbar. The provided code fulfills this, but could be made slightly more robust by handling cases where the navbar element might not be found.
+- Consider adding error handling (e.g., a `try...catch` block) to gracefully handle potential issues like a missing navbar element or problems with the image URL.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise8/index.html
+suggestions for improvement:
+- Exercise 1: Add comments explaining predictions for each section (1.2, 2.2, 4.2, 5.2) as requested.  The current comments only state 'What will happen...' without the actual prediction.
+- Exercise 1: The code doesn't execute the alerts, it only displays the code. To fully demonstrate the behavior,  `funcOne()`, `funcThree()`, `funcFive()`, `funcSix()` need to be called where appropriate within the script.
+- Exercise 1:  The code is missing the execution of the alert outside the if block in exercise 5.
+- Exercise 2: The code is missing the console.log of experiencePoints.
+- Exercise 3: The arrow function should be named 'isString'.
+- Exercise 4: The one-line arrow function should be properly named (e.g., sum).
+- Exercise 5:  The code should explicitly declare the functions, and the differences between function declaration and expression are missing.  Only comments should be used for this section.
+- Exercise 6: The code needs to use `document.body.innerHTML += ...` or similar to display the sentence in the DOM.
+- Exercise 7: The code is missing the implementation. The navbar needs to be created, and a function needs to be created to add the div with name and profile picture.
+- Exercise 8:  The instructions specify that the inner function (`addIngredients`) should be called once and then twice later. This was not implemented. The DOM manipulation for Exercise 8 (Part I and II) is missing entirely. The code needs to use `document.body.innerHTML += ...` or a similar approach to display the output on the page.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_4/ExerciseXP/Exercise8/script.js
+suggestions for improvement:
+- The instructions for Exercise 8, Part I, suggest invoking `addIngredients` once within `makeJuice`, but the provided solution invokes it twice.  This doesn't inherently break the functionality but deviates from the explicit instruction.
+- Error handling is missing. What happens if the size is invalid (e.g., 'jumbo')?  The code would still run but produce unexpected output. Add checks for valid input sizes.
+- The `displayJuice` function directly manipulates the DOM.  For larger applications, it's better to separate concerns. Consider returning the formatted string from `displayJuice` and letting another part of the code update the DOM.
+Correctness: 90%
+-----
