@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_2/ExerciseXP/script.js
+suggestions for improvement:
+- In Exercise 1, the code is perfectly correct and efficient.  No improvements needed.
+- Exercise 2 is also perfectly correct, concise, and readable. No improvements needed.
+- Exercise 3 correctly addresses both parts of the problem. The code is efficient and well-structured. No improvements are needed.
+- Exercise 4 is correct. The output will be 'object', which is the expected result.  No improvements needed.
+- Exercise 5 correctly identifies option 2 as the only constructor that successfully extends the Dog class. No improvements needed.
+- Exercise 6, part 1 is correct.  Part 2 is also correct.  Parts 3, 4, and 5 are correctly implemented with good style and functionality. No improvements needed.
+Correctness: 90%
+-----

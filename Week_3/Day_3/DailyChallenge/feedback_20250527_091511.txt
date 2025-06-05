@@ -1,0 +1,16 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/DailyChallenge/index.html
+suggestions for improvement:
+- Add input validation to handle cases where the user doesn't fill in all the fields.  Currently, the story will still be generated, but may contain empty string placeholders.
+- Implement the bonus 'shuffle' functionality.  The shuffle button is present in the HTML, but is hidden and not functional.
+- Improve error handling. The current code lacks explicit error handling for cases where form inputs are missing or invalid.  A more robust solution would gracefully handle these situations.
+- The stories should be stored in an array for easy random selection, instead of hardcoding them.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/DailyChallenge/script.js
+suggestions for improvement:
+- The HTML is missing a shuffle button with the id 'shuffle-btn'.  Add `<button id="shuffle-btn">Shuffle</button>` to the form after the 'Lib it!' button.
+- Add error handling for the case where `storyTemplates` is empty.  This could happen if the user submits the form without input.  This could also occur if `storyTemplates` is accidentally reassigned to an empty array at another point in the code.
+- Consider using more descriptive variable names (e.g., instead of `noun`, use `userNoun`).
+- The code could benefit from separating concerns; create separate functions for getting form values, generating stories, and displaying the story.
+Correctness: 95%
+-----

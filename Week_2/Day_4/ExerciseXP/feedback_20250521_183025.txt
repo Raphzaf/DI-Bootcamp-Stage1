@@ -1,0 +1,26 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_4/ExerciseXP/main.py
+suggestions for improvement:
+- The `get_words_from_file` function should handle potential `FileNotFoundError` exceptions.  The current implementation will crash if the file doesn't exist.
+- The `generate_sentence` function should include input validation to handle cases where the requested number of words exceeds the number of words in the file.
+- The program should provide more robust input validation in the `main` function. For example, it should check if the entered number is within a reasonable range (e.g., less than or equal to the number of words in the file) and handle non-integer inputs more gracefully.
+- The program should explicitly handle the possibility of an empty word list (i.e., an empty file).
+- Exercise 2 is missing from the submitted code.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_4/ExerciseXP/main2.py
+suggestions for improvement:
+- Exercise 1 is entirely missing.  The provided code only addresses Exercise 2.
+- The code lacks error handling.  It assumes the JSON structure is always as expected.  Adding error handling (try-except blocks) would improve robustness.
+- Input validation for the date format in Exercise 2 is absent.  Consider adding a check to ensure the date is in 'YYYY-MM-DD' format before adding it to the JSON.
+- The code could benefit from comments explaining each step, especially for less experienced programmers.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_4/ExerciseXP/updated_employee.json
+suggestions for improvement:
+- The provided code snippet only addresses Exercise 2.  Exercise 1 (random sentence generator) is missing entirely.
+- The code for Exercise 2 lacks the file I/O operations (saving to a file). It only modifies the JSON in memory.
+- Error handling (e.g., `try-except` blocks for file operations and handling potential `KeyError` exceptions when accessing nested keys) is missing.
+- Add input validation in Exercise 2 to ensure the date format is correct before adding it to the JSON.
+- The `sampleJson` variable in the instructions for Exercise 2 is redundant since the JSON data is directly provided as a Python dictionary (implicitly creating a data structure).
+Correctness: 80%
+-----
