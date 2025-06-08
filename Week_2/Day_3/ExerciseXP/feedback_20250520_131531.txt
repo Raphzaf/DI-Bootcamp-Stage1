@@ -1,0 +1,13 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_3/ExerciseXP/func.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_3/ExerciseXP/main.py
+suggestions for improvement:
+- In the Currency class, the `__str__` and `__repr__` methods could be improved by handling pluralization of the currency name more robustly.  Currently, it always adds 's'. Consider a conditional check based on amount.
+- Add docstrings to all functions and classes for better readability and maintainability.
+- In Exercise 2,  it would be better practice to explicitly state the file path for `func.py` when importing it. Relative paths (such as './func') can improve portability, especially when the script is moved to different directory locations.
+- Exercise 7: While functional, the code doesn't handle potential exceptions from the `faker` library (e.g., network issues). Adding exception handling would improve robustness.
+Correctness: 95%
+-----
