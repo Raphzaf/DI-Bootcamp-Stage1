@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_4/ExerciseXP/script.js
+suggestions for improvement:
+- In Exercise 1, the use of template literals for the resolve and reject messages enhances readability. Consider adding a similar approach to Exercise 2 for consistency.
+- Exercise 2 could benefit from error handling using `.catch()` for completeness, even though the promise is unlikely to reject.
+- The code is well-structured and easy to follow.  The comments are helpful and concise.
+Correctness: 100%
+-----
