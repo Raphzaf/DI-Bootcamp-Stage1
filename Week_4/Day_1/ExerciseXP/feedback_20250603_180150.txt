@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_1/ExerciseXP/script.js
+suggestions for improvement:
+- In Exercise 2, the ordinal array only contains values up to 'rd'.  For numbers greater than 3, it defaults to 'th', which is correct grammatically, but could be improved for clarity. Consider handling this with a more robust solution or a longer ordinal array.
+- Add comments to explain the logic in more complex parts of the code. This is particularly important for the chaining of methods in Exercise 4 and 6. For example, clearly state the purpose of each `map`, `filter`, and `forEach` operation, and what kind of data it is transforming.
+- While the code for Exercise 3 is correct, adding comments explaining what spread syntax (`...`) is doing in each instance would improve readability.
+Correctness: 95%
+-----
