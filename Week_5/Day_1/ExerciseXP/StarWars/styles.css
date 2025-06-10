@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('space.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.display {
+  border: 3px solid yellow;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: #000000;
+  color: rgb(212, 255, 0);
+  font-weight: bold;
+}
