@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_1/DailyChallenge2/main.js
+suggestions for improvement:
+- The code uses only one loop, fulfilling one of the requirements.  Add a second solution using nested loops to fully address the prompt.
+- The `trim()` method is used to remove trailing spaces. While functional, it's slightly less efficient than building the string without trailing spaces in the first place. Consider a more efficient string building technique in both solutions.
+- Add comments explaining the logic, especially for the single-loop approach, to enhance readability.
+Correctness: 80%
+-----
