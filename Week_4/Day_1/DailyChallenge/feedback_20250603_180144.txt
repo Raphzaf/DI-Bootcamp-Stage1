@@ -1,0 +1,14 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_1/DailyChallenge/index.html
+suggestions for improvement:
+- The code doesn't handle the case where there are no winners (scores > 5).  It should gracefully handle this situation, perhaps returning an empty array.
+- The `forEach` loops could be replaced with more concise and efficient array methods like `map` and `filter` for better readability and potentially improved performance for larger datasets.
+- The total score calculation should be done within the script itself rather than relying on a hardcoded value. This would make the code more robust and flexible.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_1/DailyChallenge/script.js
+suggestions for improvement:
+- The use of template literals for the output is good, but consider using a more structured approach like creating an object to hold the results instead of a single large string. This improves readability and maintainability, especially if more results are added later.
+- Add comments explaining the purpose of each section of the code.  This enhances readability, particularly for others who might review it.
+- While the performance is good for this small dataset, for significantly larger datasets,  consider using `reduce` instead of `forEach` for calculating the total score.  `reduce` is generally more efficient for aggregations.
+Correctness: 100%
+-----
