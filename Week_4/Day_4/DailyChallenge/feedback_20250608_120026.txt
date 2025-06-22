@@ -1,0 +1,24 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_4/DailyChallenge/1st/script.js
+suggestions for improvement:
+- The error messages could be more informative. For example, instead of "Input is not an array",  consider "The input must be an array of strings".
+- Add input validation to `sortWords` to ensure that all elements in the array are strings before attempting to sort them.  The current implementation assumes this is already handled by `makeAllCaps`, but a more robust solution would include a check here as well. 
+- For the second daily challenge, the code is missing. The prompt requests three functions (`toJs`, `toMorse`, `joinWords`) chained together to handle Morse code translation.  This section needs to be completed.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_4/DailyChallenge/2nd/index.html
+suggestions for improvement:
+- The `toJs` function should handle potential JSON parsing errors more robustly.  A `try...catch` block would improve error handling.
+- The user input in `toMorse` should be validated more rigorously.  Consider using a regular expression to allow only alphanumeric characters and specific punctuation marks from the Morse code dictionary.
+- Add more comprehensive error messages in rejected promises to provide better debugging information.
+- The `joinWords` function could be improved by allowing the user to specify the line break character or providing an option for different output formats.
+- Document the functions with JSDoc style comments to improve readability and understanding.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_4/DailyChallenge/2nd/script.js
+suggestions for improvement:
+- Add input validation to handle cases where the user enters only whitespace or an empty string in `toMorse` more robustly.  Currently, it only checks for a completely empty input, not just whitespace.
+- Improve error handling in `toMorse` to provide more context to the user if a character is not found. For example, suggest similar characters or provide a link to a complete Morse code chart.
+- Consider adding a visual indicator (e.g., loading spinner) while the promise chain is executing, especially for longer inputs, to improve user experience.
+- The `joinWords` function assumes an element with the ID 'morse' exists.  It should either create the element if it doesn't exist or gracefully handle this absence to avoid errors.
+Correctness: 95%
+-----

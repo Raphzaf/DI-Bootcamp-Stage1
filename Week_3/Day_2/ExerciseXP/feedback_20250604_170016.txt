@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_2/ExerciseXP/main.js
+suggestions for improvement:
+- In Exercise 1, add input validation to handle non-numeric divisor inputs.  A `try...catch` block could gracefully handle potential errors.
+- In Exercise 2,  the `myBill` function modifies the `stock` object.  It's generally better to keep functions pure (without side effects) for better predictability and maintainability. Create a copy of the stock object before modifying it or return a new object with updated stock values.
+- Exercise 4 could benefit from using more descriptive variable names (e.g., `nightsStay`, `destinationAirport`) and potentially using a switch statement for better readability of the `planeRideCost` function.
+- In Exercise 5,  the code directly manipulates styles using inline styles. Consider using CSS classes for better separation of concerns and maintainability.
+Correctness: 95%
+-----

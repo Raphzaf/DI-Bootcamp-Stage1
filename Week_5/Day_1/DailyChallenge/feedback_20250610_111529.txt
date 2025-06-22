@@ -1,0 +1,27 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_1/DailyChallenge/index.html
+suggestions for improvement:
+- Implement error handling for API requests.  The code should gracefully handle cases where the API is unavailable or returns an error.
+- Add loading indicators to provide visual feedback to the user while the API requests are in progress.
+- Improve the user interface with styling and potentially more sophisticated input controls. Consider using a library like Bootstrap or Materialize for this.
+- The `switchBtn` functionality could be improved by directly manipulating the select values instead of using a temporary variable.
+- Add input validation to ensure the amount entered is a valid number.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_1/DailyChallenge/script.js
+suggestions for improvement:
+- Improve error handling: Provide more specific error messages to the user based on the type of error encountered (e.g., network error, invalid API key, invalid currency code).
+- Add input validation:  Validate the amount input more robustly.  Check for non-numeric input and potentially limit the number of decimal places.
+- Enhance UI feedback: Provide visual feedback during the loading process (e.g., a loading spinner) instead of just text.
+- Consider using a more descriptive variable name than 'options' in loadCurrencies(). Something like 'currencyCodes' would be clearer.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_1/DailyChallenge/styles.css
+suggestions for improvement:
+- The provided code only includes CSS styling for a currency converter.  There's no JavaScript functionality to fetch data from the ExchangeRate API, perform conversions, populate the dropdown menus with currency codes, or handle user input.  The core functionality described in the 'Instructions' section is missing.
+- Implement the JavaScript logic to interact with the ExchangeRate API using `fetch` or `async/await` as specified in the chapter content. This includes fetching supported currencies and conversion rates.
+- Add event listeners to handle user input and update the conversion result dynamically.
+- Implement the 'switch' button functionality as described in the bonus section.  This involves swapping the 'from' and 'to' currency selections and recalculating the conversion.
+- Add error handling to gracefully manage potential API request failures (e.g., network errors, API rate limits).
+- Consider using a more descriptive naming convention for HTML elements (e.g., instead of generic IDs, use more specific IDs and classes like `fromCurrencySelect`, `toCurrencySelect`, `amountInput`, `resultOutput`). This enhances readability and maintainability.
+Correctness: 0%
+-----

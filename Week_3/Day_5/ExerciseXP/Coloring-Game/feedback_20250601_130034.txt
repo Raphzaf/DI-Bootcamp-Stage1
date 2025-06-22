@@ -1,0 +1,26 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_5/ExerciseXP/Coloring-Game/index.html
+suggestions for improvement:
+- The provided HTML structure is a good starting point, but the JavaScript (`script.js` and the dynamic generation of the color palette and grid within the `colorPalette` and `grid` divs) is missing, preventing a complete assessment of correctness.  The implementation needs to handle `mousedown`, `mouseup`, and `mouseover` events as described in the project brief.
+- Improve CSS for better responsiveness and visual appeal. Consider using CSS variables for easier customization.
+- Add error handling (e.g., gracefully handling invalid input or unexpected events).
+- Add accessibility features (e.g., ARIA attributes for better screen reader compatibility).
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_5/ExerciseXP/Coloring-Game/script.js
+suggestions for improvement:
+- Improve the performance by using `requestAnimationFrame` for updating the UI when drawing or using a virtual DOM for faster updates.
+- Add error handling (e.g., try-catch blocks) for potential issues like incorrect input types.
+- Enhance readability by using more descriptive variable names and adding comments to explain complex logic.
+- Consider separating concerns more effectively. For example, create separate modules for the color palette, grid, and event handling.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_5/ExerciseXP/Coloring-Game/styles.css
+suggestions for improvement:
+- Implement the core drawing functionality using `mousedown`, `mouseup`, and `mousemove` events, as suggested in the project brief.  The current code only uses hover effects.
+- Add a color picker or input mechanism for users to select colors. The current implementation only provides a pre-defined color palette.
+- The grid size is fixed. Allow users to adjust grid size.
+- Add error handling for unsupported browser features or unexpected user input.
+- Consider using a more efficient way to manage the grid cells.  Direct DOM manipulation for a large grid can be inefficient.  Look into using a virtual DOM or a canvas element for better performance at scale.
+- Improve accessibility by adding ARIA attributes to interactive elements.
+Correctness: 85%
+-----
