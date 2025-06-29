@@ -1,0 +1,11 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_1/Day_2/DailyChallenge/main.py
+suggestions for improvement:
+- In Challenge 1, consider adding input validation to handle non-integer inputs gracefully.  For example, use a `while` loop and error handling to ensure the user provides valid integer inputs.
+- In Challenge 2, the code could be slightly more efficient by using a list comprehension instead of iterating through the string and appending to a new string.  While this implementation works correctly, a list comprehension can be faster and more Pythonic. It would also improve readability.  Example: `new_string = ''.join([char for i, char in enumerate(user_input) if i == 0 or char != user_input[i-1]])`
+- Add comments explaining the logic for both challenges to enhance readability and maintainability.  While the code is currently understandable, comments would make it clearer for others (or yourself later) to follow the flow of logic.
+Brief justification:
+- correctness: Both Challenge 1 and Challenge 2's solutions correctly implement the described functionality. Challenge 1 accurately generates a list of multiples as specified, and Challenge 2 successfully removes consecutive duplicate letters while preserving non-consecutive duplicates.  The code directly addresses all aspects of the problem statements in the Chapter Content/Questions.
+- readability: The code is generally well-structured and easy to follow.  However, some comments would improve readability.  The use of descriptive variable names helps. The logic is mostly straightforward, but improvements are suggested to boost readability.
+- performance: The performance of both solutions is acceptable for small inputs.  However, for very large inputs, Challenge 2's iterative approach could be slightly less efficient than a more optimized solution using list comprehensions. The current performance is still adequate for the problem scope but could be improved for larger-scale applications.
+- security: The code does not contain any obvious security vulnerabilities. It only deals with user input in the form of strings and integers and does not perform any file operations or interact with external systems, thus there are no security issues here
+

@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_1/DailyChallenge1/main.js
+suggestions for improvement:
+- The variable names `wordNot` and `wordBad` could be more descriptive, perhaps `indexOfNot` and `indexOfBad` for better clarity.
+- Adding comments to explain the logic behind the `if` condition and string manipulation would enhance readability.
+- Consider using a more robust method to handle edge cases, such as sentences where 'not' or 'bad' might appear multiple times or with different capitalization.
+Correctness: 100%
+-----
