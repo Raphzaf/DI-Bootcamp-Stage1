@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_3/ExerciseXP/main.ts
+suggestions for improvement:
+- In Exercise 1, add a getter method for the `salary` property to demonstrate access control effectively.  While the current implementation correctly uses access modifiers, showing how to access private and protected properties with dedicated methods would enhance understanding.
+- In Exercise 2, explicitly demonstrate the immutability of the `readonly` property by attempting to change it and handling the error (or lack thereof).  This would provide a more robust example illustrating the `readonly` modifier's behavior.
+- In Exercise 5, the `PremiumUser` interface is missing a closing brace `}`.  This is a syntax error that should be corrected.
+- Consider adding more comprehensive error handling or input validation where appropriate (e.g., checking for null or undefined values in the constructors).
+Correctness: 95%
+-----
