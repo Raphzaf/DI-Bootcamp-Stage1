@@ -1,0 +1,12 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_1/Day_1/ExerciseXP/main.py
+suggestions for improvement:
+- Exercise 1: The instructions specified printing the output in one line.  The code uses four print statements.
+- Exercise 2: The `^` operator in Python is bitwise XOR, not exponentiation. Use `**` for exponentiation.
+- Exercise 3: The answers are correct, but presenting them as comments is not ideal; consider using print statements for better clarity.
+- Exercise 5: The instructions ask for an *interesting* sentence. The provided sentence is quite plain.
+Brief justification:
+- correctness: Most exercises are correctly implemented.  However, Exercise 1 doesn't follow the one-line requirement, and Exercise 2 uses the wrong operator for exponentiation. Exercise 3 provides the correct answers but in a less-than-ideal format.  The rest of the exercises accurately reflect the problem statements.
+- readability: The code is generally well-formatted and easy to understand. The variable names are descriptive.  The comments in Exercise 3 could be improved. The structure is clear and consistent throughout the exercises.
+- performance: The code's performance is efficient for the given tasks. No unnecessary computations or loops are used. The solutions use straightforward approaches to solving the problems. 
+- security: There are no security vulnerabilities in this code.  The code does not handle any sensitive data or interact with external systems that could introduce security risks.
+

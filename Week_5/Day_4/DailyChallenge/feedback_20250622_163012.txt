@@ -1,0 +1,6 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_4/DailyChallenge/main.ts
+suggestions for improvement:
+- The use of a switch statement is efficient and readable, but a more concise approach could be using type guards directly within the map function for better type safety and readability for very large or complex types.
+- Consider adding input validation to handle potential errors, such as null or undefined values in the input array or missing properties in the objects.
+Correctness: 100%
+-----

@@ -1,0 +1,24 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_2/DailyChallenge/index.html
+suggestions for improvement:
+- The `Video` class correctly implements the `watch()` method as specified.
+- The code instantiates two `Video` objects and calls the `watch()` method on them as required.
+- The bonus parts are missing.  The code doesn't create an array to store data for five `Video` instances and doesn't loop through the array to instantiate those instances.
+- Consider adding error handling (e.g., type checking for input parameters in the `Video` constructor) to improve robustness.
+- The HTML file is a basic structure and doesn't actually display the video information. The javascript code is missing.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_2/DailyChallenge/script.js
+suggestions for improvement:
+- The `alert` in the `watch()` method could be improved.  Consider using `console.log` for debugging or a more user-friendly method like displaying the message within the webpage itself (which the code partially does with the button).
+- The code adds extra functionality beyond the core requirements (creating and adding the videos to the DOM). While this is a good addition, it makes the code more complex than what is strictly asked for in the prompt.
+- The bonus section is well implemented by using `map` to create the instances from the array.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_2/DailyChallenge/styles.css
+suggestions for improvement:
+- The code is missing the `Video` class and its `watch()` method, which are core requirements of the exercise.
+- The bonus parts (array of videos and instantiation loop) are not implemented.
+- The provided HTML/CSS is not directly related to the Javascript functionality and is not part of the challenge's requirements.  It's good styling, but irrelevant for the grading.
+- Add error handling to ensure that the input parameters for the Video class are of the correct type.
+Correctness: 70%
+-----
