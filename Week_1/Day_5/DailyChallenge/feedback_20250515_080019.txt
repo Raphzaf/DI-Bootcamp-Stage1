@@ -1,0 +1,10 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_1/Day_5/DailyChallenge/Challenge1.py
+suggestions for improvement:
+- Challenge 1: The code for Challenge 1 perfectly addresses the prompt's requirements.  No improvements needed.
+- Challenge 2: The `longest_word` function in Challenge 2 doesn't handle punctuation within words as accurately as the problem description intends.  It splits the sentence into words using space as the delimiter, which might lead to incorrect results when words have internal punctuation. For example, it would fail for a sentence like 'This,is-a-test'.
+Brief justification:
+- correctness: Challenge 1 correctly takes comma-separated input, splits it, sorts alphabetically, and rejoins, fulfilling all aspects of the chapter's instructions.  Challenge 2 largely works but has a minor flaw in word splitting, not precisely adhering to the requirements that punctuation should be considered part of the word.  The space-based split does not address this issue.
+- readability: Both functions are easy to understand and follow. Variable names are descriptive. The code is well-structured and concise. However, adding comments to explicitly explain the function of the `longest_word` function would further enhance readability. For example, a short comment explaining the purpose of initializing `longest` and `max_length` variables would be beneficial.
+- performance: The algorithms used are efficient. The time complexity for sorting in Challenge 1 is O(n log n), which is optimal for comparison-based sorting. The linear scan in Challenge 2 has a time complexity of O(n), which is optimal for finding the longest word among n words.
+- security: There are no security concerns in the provided code. The code only performs string manipulation and does not involve any external input or data processing that could introduce security vulnerabilities.
+

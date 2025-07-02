@@ -1,0 +1,5 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_3/DailyChallenge/main.sql
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
