@@ -1,0 +1,10 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_1/daily-challenge-actors/main.sql
+suggestions for improvement:
+- The code correctly addresses the first task (counting actors) and attempts the second (adding an actor with blank fields).  However, it doesn't explicitly show the result of the insert with NULL values.  Adding a SELECT statement after the problematic INSERT would make the outcome clearer. 
+- Add comments to explain the purpose of each section of the SQL code (CREATE TABLE, INSERT, QUERIES).
+Brief justification:
+- correctness: The SQL code directly addresses the two instructions given in the chapter.  It creates the table, inserts data, counts the rows, and attempts to insert rows with NULL values.  It would be better to include a SELECT statement after the problematic INSERT to show the results of the insert operation in order to completely satisfy the requirements of the question. The score is slightly reduced due to this omission of explicitly showing the result of the second task.
+- readability: The code is well-structured and easy to follow. The SQL is properly formatted. Adding comments would enhance readability further.
+- performance: The SQL queries are efficient for the tasks they perform.  The `COUNT(*)` operation is optimized for counting rows. No performance issues are apparent.
+- security: No security vulnerabilities are present in the provided SQL code.  All operations are standard SQL operations performed on a local database (implied). The provided code does not involve any external input or user interactions that could potentially lead to SQL injection or other security risks.
+

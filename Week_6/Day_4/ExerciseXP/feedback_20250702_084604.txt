@@ -1,0 +1,68 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise1/product.js
+suggestions for improvement:
+- The `shop.js` file is missing, which is a crucial part of Exercise 1.  The provided code only shows the `products.js` file and the `products` array.  The exercise requires creating a `shop.js` file that imports this array, searches for products, and prints details.
+- Add error handling to the `shop.js` (once implemented) to gracefully handle cases where a product is not found.  Currently, if a product is not found, it may cause an error.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise1/shop.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- The code could include error handling for the case where the `persons` array is empty.  This would prevent a division by zero error.
+- Adding a more descriptive variable name than `people` in the `calculateAverageAge` function would slightly improve readability (e.g., `persons` to match the imported variable).
+- Consider adding a comment explaining the use of `toFixed(2)` to round the average age to two decimal places.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise2/data.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise3/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise3/fileManager.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise4/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise4/todo.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise5/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise5/math.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise6/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise7/copy-file.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise7/read-directory.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
