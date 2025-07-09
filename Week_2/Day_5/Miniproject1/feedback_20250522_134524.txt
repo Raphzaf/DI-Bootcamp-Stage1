@@ -1,0 +1,18 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_5/Miniproject1/anagram_checker.py
+suggestions for improvement:
+- The `anagram_checker.py` file should handle potential `FileNotFoundError` exceptions during file loading.  A `try-except` block would improve robustness.
+- The performance of `get_anagrams` could be significantly improved by pre-processing the word list to group words by their sorted character sets. This would avoid unnecessary comparisons.
+- Add more comprehensive input validation in `anagrams.py` to handle edge cases and provide more informative error messages to the user.
+- Consider using a more descriptive variable name than `file` in the `__init__` method.  For example, `wordlist_file`.
+- The `anagrams.py` file is missing, which prevents a complete assessment of the UI functionality. The instructions require a separate file for user interface.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_5/Miniproject1/anagrams.py
+suggestions for improvement:
+- Improve error handling: Provide more specific error messages to the user (e.g., 'Word not found in dictionary').
+- Enhance `get_anagrams` efficiency:  The current implementation likely has a nested loop which is O(n^2) complexity.  Consider using more efficient algorithms like sorting or hashing to reduce the time complexity.
+- Add input validation for empty strings:  The code doesn't explicitly check for empty strings.
+- Improve User Interface: The UI could be made more user-friendly with clearer prompts and better formatting of output.
+- Add a progress indicator for large word lists: The program might take a while for very large word lists. Consider adding a progress bar or other indicator to show the processing progress.
+Correctness: 95%
+-----

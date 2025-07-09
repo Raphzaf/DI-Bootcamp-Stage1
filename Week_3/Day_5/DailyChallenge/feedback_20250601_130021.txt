@@ -1,0 +1,28 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_5/DailyChallenge/index.html
+suggestions for improvement:
+- Implement Bonus I: Add task objects with id, text, and done properties.  Include data-task-id attribute.
+- Implement Bonus II: Add a deleteTask function to remove tasks from the array and DOM.
+- Improve styling for better visual presentation (aligning elements, spacing etc.).
+- Add error handling for unexpected input types.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_5/DailyChallenge/script.js
+suggestions for improvement:
+- Add error handling for cases where elements (form, input, taskList) are not found.  This can happen if the HTML structure doesn't match expectations.
+- The CSS for styling the 'done' class and the overall layout is missing.  Include a CSS file to style the elements as shown in the image.
+- Improve the `renderTask` function by directly setting the `text-decoration` property of the label instead of relying on a CSS class. This approach provides more fine-grained control.
+- Consider adding a unique identifier (UUID) instead of a simple incrementing number for `task_id` to prevent collisions, especially in more complex applications.
+- Add a visual cue or indication to show the user that the task was successfully deleted or marked as complete.
+- The code lacks accessibility features for screen readers. Add appropriate ARIA attributes to the elements.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_5/DailyChallenge/styles.css
+suggestions for improvement:
+- The code is missing the JavaScript functionality to add tasks to the array and DOM, handle checkbox clicks (Bonus I), and delete tasks (Bonus II).
+- Add event listeners for button clicks and checkbox clicks in the JavaScript code.
+- Implement the `addTask`, `doneTask`, and `deleteTask` functions as described in the instructions.
+- Use appropriate data structures (arrays of objects for Bonus I) to manage the task list efficiently.
+- Include Font Awesome for the 'X' button as specified.
+- Add error handling for empty input fields.
+Correctness: 70%
+-----

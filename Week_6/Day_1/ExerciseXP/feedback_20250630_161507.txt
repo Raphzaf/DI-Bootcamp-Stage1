@@ -1,0 +1,11 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_1/ExerciseXP/items_and_customers.sql
+suggestions for improvement:
+- Add comments to explain the purpose of each SQL statement, especially the INSERT statements, for better readability.
+- Consider using more descriptive names for columns (e.g., item_id, customer_id, first_name, last_name).
+- While not strictly necessary for this small dataset, for larger datasets, consider adding indexes to columns frequently used in WHERE clauses (like lastname and price) to improve query performance.
+Brief justification:
+- correctness: The code perfectly addresses all aspects of Exercise 1. It creates the required tables ('items' and 'customers'), inserts the specified data, and executes all six SQL queries accurately, returning the expected results as described in the chapter content.  Each query directly addresses a specific data retrieval task outlined in the exercise.
+- readability: The code is well-structured and easy to follow.  The SQL is clean and organized.  Minor improvements in commenting and naming conventions could enhance readability further. The use of SERIAL PRIMARY KEY is good practice and enhances readability.
+- performance: The provided SQL queries are efficient for this small dataset. The use of appropriate data types and indexes (though not explicitly added here) would ensure good performance even with a larger dataset.  There are no obvious performance bottlenecks.
+- security: The code doesn't expose any security vulnerabilities. It only performs database operations within the scope of the exercise. No sensitive data handling or user input validation is involved, so security is not a concern in this context.
+
