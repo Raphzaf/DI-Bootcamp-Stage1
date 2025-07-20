@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_5/ExerciseXP/script.js
+suggestions for improvement:
+- In Exercise 1 and 2,  the console logging of the entire data object and the GIF array is slightly redundant.  Consider only logging the relevant `data.data` array directly for better clarity.
+- Add comments to the code explaining the purpose of different sections, especially in Exercise 3 where the `async/await` logic is used. This enhances readability.
+- Exercise 4 doesn't require any changes; the code correctly demonstrates the use of async/await and Promises.  Consider adding a comment to explain the output - 'calling', then after 2 seconds 'resolved'.
+Correctness: 95%
+-----

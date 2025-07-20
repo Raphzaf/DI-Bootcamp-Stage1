@@ -1,0 +1,16 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_3/DailyChallenge/index.html
+suggestions for improvement:
+- The script.js file is missing.  The code needs to include the JavaScript functionality to handle form submission and JSON output.  Without it, the core functionality is not implemented.
+- Add input validation to prevent non-alphabetic characters in the name and lastname fields.
+- Consider using more descriptive IDs for elements (e.g., 'firstName' instead of 'name').
+- Improve error handling.  What happens if a user doesn't fill both fields and submits?
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_3/DailyChallenge/script.js
+suggestions for improvement:
+- Add input validation to handle empty fields or unexpected input.  The current code will display an empty JSON object if the user doesn't enter data.
+- Consider using `textContent` instead of `innerHTML` to prevent potential XSS vulnerabilities, although this is already done correctly.
+- Improve the visual presentation of the JSON output (e.g., using `<pre>` tags for formatting).
+- Add error handling for cases where the form elements (e.g., 'name', 'lastname', 'output') are not found.
+Correctness: 95%
+-----

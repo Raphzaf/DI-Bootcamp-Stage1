@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_2/DailyChallenge/main.ts
+suggestions for improvement:
+- The function should explicitly handle the 'undefined' type, as it's a common JavaScript type.
+- The use of `any` for `value` is generally discouraged.  It's better to use a more specific type or a union type if you anticipate different input types.
+- Add comments explaining the purpose of the null check and the logic within the function.
+Correctness: 95%
+-----

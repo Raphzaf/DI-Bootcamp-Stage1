@@ -1,0 +1,29 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP-animation/Exercise-1/index.html
+suggestions for improvement:
+- Part I and II of Exercise 1 are implemented correctly. However, Part III is incomplete. The code needs to implement the `clearInterval` functionality both when the button is clicked and when 5 paragraphs exist.
+- Exercise 2 is missing.  The provided HTML is included, but the JavaScript (`script.js`) to handle the animation is not.
+- Add comments to explain the logic of the code, especially in the `setInterval` and `clearInterval` parts.
+- Use more descriptive variable names (e.g., instead of just `intervalId`, use something like `paragraphAddingInterval`).
+- For Exercise 2, consider using `requestAnimationFrame` for smoother animation instead of `setInterval`.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP-animation/Exercise-1/script.js
+suggestions for improvement:
+- Exercise 1, Part III: The instructions specify that the interval should be cleared *either* by clicking the button *or* when 5 paragraphs exist.  The current code correctly handles both, but could be slightly improved for clarity by explicitly stating the condition for clearing the interval (e.g., a comment).
+- Exercise 2:  The provided code is missing.  The JSON response only addresses Exercise 1.
+- Improve code structure. Separate functions for each logical task would enhance readability.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP-animation/Exercise-2/index.html
+suggestions for improvement:
+- Exercise 1 is missing. The provided code only addresses Exercise 2.
+- In Exercise 2, the animation is not smooth because it moves 1px every millisecond, which is too frequent and can overload the browser.  Consider increasing the interval time.
+- Exercise 2: Add error handling. What happens if the 'animate' div is not found?
+- Exercise 2: The code should use `requestAnimationFrame` instead of `setInterval` for smoother and more efficient animations.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP-animation/Exercise-2/script.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
