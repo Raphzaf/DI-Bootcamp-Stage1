@@ -1,0 +1,19 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_1/DailyChallenge/trivia-quizz/app.js
+suggestions for improvement:
+- The `triviaQuestions` array should be imported into the router file rather than hardcoded in the main app.js file.
+- Implement error handling for cases where a user tries to access a question beyond the array bounds or submits an invalid answer type.
+- Add input validation to prevent issues with malicious or unexpected input.
+- The feedback mechanism for correct/incorrect answers is missing.  The response should explicitly state whether the answer was right or wrong.
+- The `/quiz/score` route is not implemented.  This is a critical requirement of the assignment.
+- Consider using a session or other mechanism to store user progress between requests instead of relying on a single request.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_1/DailyChallenge/trivia-quizz/routes/quiz.js
+suggestions for improvement:
+- Use proper HTTP status codes for all responses. For example, use 200 OK for successful GET requests and 201 Created for successful POST requests.
+- Implement input sanitization to prevent potential vulnerabilities like XSS attacks.  Don't just rely on toLowerCase() for answer comparison.
+- Use environment variables or a configuration file for the trivia questions instead of hardcoding them.  This makes the code more flexible and maintainable.
+- The `/quiz` route uses JSON responses for both starting the quiz and handling the answer submission, which isn't ideal from a user experience perspective. Consider separating the response formats (e.g. HTML for the quiz display).
+- Add error handling for unexpected situations, such as the case where `req.body.answer` is missing or of an unexpected type.
+Correctness: 95%
+-----

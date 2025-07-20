@@ -1,0 +1,15 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_5/ExerciseXP/Exercise1/server.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_5/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_5/ExerciseXP/Exercise3/dataservice.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

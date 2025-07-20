@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_2/ExerciseXP/main.ts
+suggestions for improvement:
+- In Exercise 7, add an actual `<input id="username" />` element to the HTML for the code to work correctly.  The current code will throw an error because `document.getElementById("username")` will return null if no such element exists.
+- Improve variable naming in Exercise 2. `userName` could be shortened to `name` for better readability.
+- Add comments to explain the purpose of function overloading in Exercise 9 for better understanding.
+Correctness: 95%
+-----
