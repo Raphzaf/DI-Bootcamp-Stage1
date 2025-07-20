@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_3/DailyChallenge/main.ts
+suggestions for improvement:
+- Consider adding input validation to the `addBook` method to prevent adding books with duplicate ISBNs.
+- The `getBookDetails` method could be improved by returning a boolean indicating if a book with the specified ISBN was found, or throwing an error if there is no such book. This approach could be more robust and less error-prone than returning null.
+- For larger libraries, consider using a more efficient data structure for storing books (like a Map using ISBN as the key) to improve the performance of `getBookDetails`.
+Correctness: 100%
+-----

@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_2/Day_5/DailyChallenge/main.py
+suggestions for improvement:
+- In Exercise 1, the explanation of abstraction is incorrect. Abstraction is about hiding complex implementation details and showing only essential information to the user.  Inheritance is a separate concept.
+- In Exercise 2, consider adding error handling for the case where the deck is empty before calling `shuffle()` in the `deal()` method.  While the `IndexError` catches the immediate problem, a user might call `deal` multiple times after the deck is empty without realizing that the deck was already exhausted.  This could be handled with a simple check or a more informative exception.
+- The use of `dataclass` in Exercise 2 is good for readability and conciseness but might not be familiar to all students. Consider adding a brief comment explaining its purpose and advantages.
+- Exercise 2's `Deck` class efficiently uses list comprehensions for building the deck and `random.shuffle` for shuffling, which are efficient.  Consider adding docstrings to methods for improved clarity.
+Correctness: 95%
+-----

@@ -1,0 +1,28 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_1/ExerciseXP/StarWars/index.html
+suggestions for improvement:
+- The code is missing the implementation of AJAX calls using the Fetch API and async/await as specified in the chapter content.  The `script.js` file needs to be created and populated with the functions to fetch character data from the provided API and update the DOM accordingly.
+- Error handling for API requests (like network errors or non-200 status codes) is absent. The instructions explicitly mention displaying an error message if data retrieval fails.
+- Loading animation is not implemented. The instructions clearly state to display a loading message with an animation icon from Font Awesome.
+- The provided HTML only shows a static character;  it doesn't dynamically update based on API calls.
+- Add proper loading state management.  Currently, there's no visual indication that data is being fetched.
+Correctness: 60%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_1/ExerciseXP/StarWars/script.js
+suggestions for improvement:
+- Use a more descriptive class name for the loader instead of just '.loader'.  Consider adding a loading icon as specified in the instructions (using Font Awesome).
+- Implement proper error handling for the `homeRes` fetch, as failure to fetch homeworld data doesn't necessarily mean the character data is unavailable.
+- The API endpoint used (`https://swapi.dev/api/people/${id}/`) is different from the one specified in the instructions (`https://www.swapi.tech/`).  The solution uses `swapi.dev` which is functionally similar, but not what was asked for.
+- Add a visual improvement to the error message. The current error message lacks styling compared to the example image.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_5/Day_1/ExerciseXP/StarWars/styles.css
+suggestions for improvement:
+- The provided code only includes CSS styling.  There's no HTML structure or JavaScript functionality to fetch data from the Star Wars API, display it, handle loading states, or manage errors as specified in the instructions.
+- Implement the core logic using async/await with the Fetch API to retrieve and display character data from `https://www.swapi.tech/api/people/`. 
+- Add HTML elements to hold the character information and loading/error messages.
+- Include JavaScript functions to fetch data, update the DOM, and handle potential errors.
+- Use a loading indicator (e.g., a spinning icon from Font Awesome) while fetching data.
+- Display an appropriate error message if the API request fails.
+- Add a button to trigger the data fetching and display update.
+Correctness: 0%
+-----

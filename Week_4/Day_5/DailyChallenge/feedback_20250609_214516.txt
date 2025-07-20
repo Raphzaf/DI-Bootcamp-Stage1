@@ -1,0 +1,17 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_5/DailyChallenge/index.html
+suggestions for improvement:
+- Add error handling for cases where the API request fails (e.g., network error or invalid category).  The current implementation doesn't handle these scenarios gracefully.
+- Improve the visual feedback to the user. For instance, display a message indicating loading, success, or failure of the API call.
+- The code could benefit from using more descriptive variable names (e.g., instead of `data`, use `giphyData`).
+- Consider adding a loading indicator while fetching the GIF to enhance user experience.
+- Refactor the code to separate concerns into smaller, more manageable functions. This will enhance readability and maintainability.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_4/Day_5/DailyChallenge/script.js
+suggestions for improvement:
+- Add error handling for cases where the Giphy API doesn't return an image URL (e.g., no results for the search term).  Display a user-friendly message instead of silently failing.
+- Improve the visual presentation of GIFs and buttons.  Consider adding CSS to style the elements for better user experience. For example, add some spacing between the GIFs.
+- The code correctly handles the deletion of individual GIFs and all GIFs, fulfilling requirement 4 and 5. Consider adding a loading indicator while fetching the GIF to enhance the user experience.
+- Add input validation to prevent users from submitting empty or invalid search terms, providing a better user experience.
+Correctness: 95%
+-----

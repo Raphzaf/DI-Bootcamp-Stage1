@@ -1,0 +1,85 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/ExerciseXP/Exercise1/server.js
+suggestions for improvement:
+- The code is missing the database connection and interaction using Knex.  The instructions explicitly mention using Knex to query data from a database.  The `postRoutes` file needs to be implemented to handle CRUD operations with database interaction.
+- Error handling is rudimentary.  More specific error handling is needed, including handling database errors and input validation.
+- The `postRoutes` file and the database schema are not included, making it impossible to assess the correctness of the CRUD operations fully. The code only sets up the basic express server and error handling. The core functionality described in Exercise 1 is missing.
+- Security best practices are not fully implemented. Input validation and sanitization are missing, which makes the API vulnerable to injection attacks.
+- Consider using a more robust logging solution instead of `console.error` for production environments.
+- Add middleware for request body parsing,  potentially beyond just `express.json()` to handle other content types.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/ExerciseXP/Exercise1/server/config/db.js
+suggestions for improvement:
+- The provided code only creates a PostgreSQL connection pool.  It does not implement any of the API routes or CRUD operations specified in Exercises 1 and 2.  The exercises require building Express.js APIs that interact with this database.
+- Hardcoding database credentials directly in the code is a major security risk.  Use environment variables instead.
+- The code lacks error handling for database connection failures.
+- The exercises require creating a `posts` table and a `books` table in the database.  This code doesn't create the tables.
+- The code is missing the implementation of Express.js routes for handling GET, POST, PUT, and DELETE requests.
+- Implement proper directory structure as specified (server/config, server/controllers, server/models, server/routes)
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/ExerciseXP/Exercise1/server/controllers/postsController.js
+suggestions for improvement:
+- Add input validation to prevent SQL injection and other vulnerabilities.  Sanitize all user inputs before using them in database queries.
+- Implement more robust error handling.  Catch specific errors (e.g., database errors) and provide more informative error messages to the client.
+- Consider using a more efficient database query method if the `Post` model's methods are not already optimized.
+- The code lacks explicit handling for cases where `req.body` is missing required fields. Add checks for `title` and `content` in the `create` and `update` routes.
+- Improve the structure of the error handling; currently the same error message is used for a 404 and other potential errors.  This can lead to confusion.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/ExerciseXP/Exercise1/server/models/postModels.js
+suggestions for improvement:
+- The code lacks error handling.  It should include try...catch blocks to handle potential database errors (e.g., connection errors, query failures).
+- The code assumes a PostgreSQL database and uses parameterized queries, which is good. However, it doesn't explicitly specify the database connection details. This should be handled in the `db` module.
+- Input validation is missing.  The code should validate `title` and `content` (and `id` where applicable) to prevent SQL injection or data integrity issues.  Sanitize inputs before sending them to database queries.
+- The code is missing any handling for edge cases. For example, what if `getPostById` or `updatePost` or `deletePost` can't find a post with the given ID? The functions should return a meaningful response (e.g., null or an appropriate error) instead of potentially throwing errors silently.
+- Consider using a more robust ORM (Object-Relational Mapper) like Knex.js or Sequelize for better database interaction and abstraction.
+- For better organization and maintainability, separate the database interaction logic (queries) from the route handling. The controllers should handle the logic related to the specific routes. The model should manage interactions with database.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/ExerciseXP/Exercise1/server/routes/postRoutes.js
+suggestions for improvement:
+- The code only provides the routing structure.  The actual implementation of the controllers (getAll, getOne, create, update, remove) and database interaction using Knex are missing.  These are crucial for fulfilling the exercise requirements.
+- Error handling is absent.  The code should include mechanisms to catch and handle potential errors (database errors, invalid input, etc.) and return appropriate responses.
+- The code lacks database connection setup.  It doesn't show how Knex is configured to connect to the Postgres database.
+- Security considerations are missing. Input sanitization and validation are necessary to prevent SQL injection and other vulnerabilities.  Authentication and authorization should be considered for a production-ready API.
+- The directory structure is partially implemented in the file path (`../controllers/postsController`), but the actual files in `config`, `models` and `routes` are missing. The structure needs to be fully implemented.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- The code only implements Exercise 2 partially.  It's missing the database connection and the CRUD operations beyond the 'Read all' functionality.  It needs to interact with a database (as specified in both exercises) to store and retrieve data.
+- Error handling is missing. The code should include error handling for database operations and other potential issues (e.g., invalid input).
+- The `bookRoutes` file needs to be created and populated with the actual route handlers for create, read (single book), update, and delete.
+- Input validation is missing. The code should validate the data received from POST requests to prevent injection attacks and data corruption.
+- Consider using a more robust database library like Knex.js as mentioned in the chapter content for database interactions.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/ExerciseXP/Exercise2/server/controllers/bookControllers.js
+suggestions for improvement:
+- The code lacks explicit error handling for database operations.  It should handle potential errors from Knex or the database itself (e.g., connection errors, query errors).
+- The `Book` model's implementation (`Book.getAll()`, `Book.getById()`, etc.) is not shown, making it impossible to assess its correctness and efficiency.  The provided code assumes these functions work flawlessly.
+- Input validation is missing.  The code should validate the `req.body` data in the `create` and `update` routes to prevent vulnerabilities (e.g., SQL injection if not using parameterized queries).
+- The code doesn't follow the specified directory structure (server/config/controllers/models/routes).  The controller logic is directly in the provided file.
+- For better scalability and maintainability, separate concerns (data access, business logic, API routing) into distinct files (models, controllers, routes) according to the specified structure.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/ExerciseXP/Exercise2/server/models/bookModel.js
+suggestions for improvement:
+- The code implements basic CRUD operations for an in-memory `books` array, not a database as specified in Exercise 1 and 2.  It lacks database interaction using Knex or any other ORM.
+- Error handling is minimal.  More robust error handling is needed (e.g., for database errors, input validation).
+- The `id` generation in `create` uses `Date.now()`, which is not ideal for unique ID generation in a real-world application.  A UUID library or database auto-increment is preferred.
+- The code uses an in-memory array for storing data, which is not persistent. The exercises clearly ask for a database connection (PostgreSQL).
+- Security is lacking.  Input validation is absent, making the API vulnerable to injection attacks if ever connected to a real database.
+- The directory structure specified in the exercises (server/config/controllers/models/routes) is not implemented.
+Correctness: 60%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/ExerciseXP/Exercise2/server/routes/bookRoutes.js
+suggestions for improvement:
+- The code is missing the actual implementation of the controllers and models.  The `controller` requires the actual functions for getAll, getOne, create, update, and remove. These functions should handle database interaction (presumably using Knex as mentioned in the chapter content).
+- Error handling is missing. The code needs to handle potential errors during database operations (e.g., connection errors, record not found). Appropriate HTTP status codes should be returned for different error scenarios.
+- Security is lacking. Input validation is crucial to prevent SQL injection and other vulnerabilities.  The code should sanitize or validate all user inputs before using them in database queries.
+- Database interaction (using Knex) is not shown.  The chapter specifically mentions using Knex, but this code snippet only shows routing.  The actual Knex queries are not demonstrated.
+- The code only addresses Exercise 2 (book-api). Exercise 1 (blog-api) is not addressed.
+Correctness: 80%
+-----

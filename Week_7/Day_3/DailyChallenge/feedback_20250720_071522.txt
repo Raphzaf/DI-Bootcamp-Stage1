@@ -1,0 +1,49 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/app.js
+suggestions for improvement:
+- Improve error handling to provide more specific error messages to the client. For example, instead of just 'error1' and 'error2', provide detailed messages such as 'Username already exists' or 'Incorrect password'.
+- Add input validation on the client-side to prevent unnecessary server requests with invalid data.
+- Consider using a more robust database solution instead of JSON file storage for production environments. JSON files are not scalable or efficient for large numbers of users.
+- Implement input sanitization to prevent injection attacks.  While the provided code doesn't directly expose this vulnerability, it's a good practice to sanitize user inputs before storing them.
+- Add more comprehensive logging to aid in debugging and monitoring.
+- The `id` generation using `Date.now()` might lead to collisions in high-traffic scenarios. Explore UUIDs or other unique ID generation strategies.
+- The `users` array is read from the file on every request. This is inefficient. Consider caching the `users` array in memory and updating the cache whenever there is a modification.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/login.html
+suggestions for improvement:
+- The code only implements the login functionality and a part of the front-end.  It's missing the registration form and the backend API (Express.js, Bcrypt, and JSON file storage) as specified in the chapter content.
+- Implement the `/register`, `/users`, `/users/:id`, and `/users/:id` (PUT) routes in Express.js.
+- Use bcrypt for password hashing and verification in the backend.
+- Implement proper error handling for file operations and input validation.
+- Add more robust security measures, such as input sanitization and protection against common web vulnerabilities.
+- The provided HTML only handles the login form; the registration form is missing.
+- The client-side code assumes a specific error message format ('error2') from the server.  It should handle more general error responses.
+Correctness: 60%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/package-lock.json
+suggestions for improvement:
+- This JSON represents a `package-lock.json` file, detailing project dependencies. It does not contain any code implementing the user management API as described in the chapter content.
+- To receive a proper assessment, please provide the actual code for the Express.js application, including the HTML files, routing logic, and JSON file handling.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/package.json
+suggestions for improvement:
+- This is a `package.json` file, not an implementation of the user management API.  The chapter requires the creation of an Express.js application, HTML forms,  handling of user registration and login with bcrypt, and JSON file storage.  This file only lists dependencies.
+- Implement the Express.js application, HTML forms, and API routes as described in the chapter instructions.
+- Add error handling for file operations, input validation, and login failures.
+- Include bcrypt password hashing and verification.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/register.html
+suggestions for improvement:
+- The provided code only implements the registration form and its interaction with a server-side API endpoint.  It's missing the Express.js server, the login form, the JSON file handling, bcrypt integration, and other API endpoints as specified in the chapter content.
+- The error handling is rudimentary.  More robust error handling should be added to the front-end and definitely to the back-end.
+- No security measures are implemented on the client-side to prevent things like cross-site scripting (XSS) attacks.
+- The server-side code (missing from the submission) needs to implement bcrypt for password hashing and verification, and handle file I/O securely and efficiently.
+Correctness: 50%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/users.json
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
