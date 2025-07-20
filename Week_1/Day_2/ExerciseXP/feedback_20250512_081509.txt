@@ -1,0 +1,12 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_1/Day_2/ExerciseXP/main.py
+suggestions for improvement:
+- In Exercise 1,  the instructions mention adding two numbers and removing the last one added. The code adds two numbers, but it doesn't explicitly track which was added last; it simply removes a random element from the set.  Consider a more robust method to track the last added element if you need to ensure this specific requirement is met.
+- Exercise 2's solution is not ideal.  While it demonstrates the immutability of tuples by creating a *new* tuple instead of modifying the original, the instructions are asking to explicitly try to modify it and explain why it fails.  It should include a `try...except` block to catch the `TypeError` that occurs when attempting to directly modify a tuple.
+- Exercise 9's bonus part could be improved. It currently takes ages as space-separated input, which isn't the most user-friendly.  It would be better to handle potential input errors (non-numeric input). The program also doesn't explicitly name the attendees—only their ages are tracked.
+- In Exercise 10, the loop for making sandwiches could be made more efficient by iterating directly through a copy of `sandwich_orders` and modifying the original list concurrently to avoid the need for an explicit `remove` operation within the loop.  It's generally preferred to avoid modifying a list that's being iterated over
+Brief justification:
+- correctness: The code generally solves the exercises as requested.  However, there are minor issues in tracking the 'last added' number in Exercise 1, the approach for Exercise 2, and the robustness of input handling in Exercise 9.  Exercise 10 is functional but could be made more efficient.
+- readability: The code is mostly well-structured and easy to follow.  However, comments could be added to Exercise 9 to clarify the logic and potentially enhance readability.  In the bonus section of Exercise 9 and Exercise 10 some more descriptive variable names could improve readability.
+- performance: The performance of the code is good overall. There's room for optimization in the method used in Exercise 10 as described above.
+- security: No significant security issues are present in the code.  The code doesn't handle user input in a way that would introduce security vulnerabilities.
+

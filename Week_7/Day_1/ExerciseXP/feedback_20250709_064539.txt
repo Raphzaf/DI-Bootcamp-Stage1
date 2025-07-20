@@ -1,0 +1,57 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_1/ExerciseXP/Exercise1/app.js
+suggestions for improvement:
+- The `index.js` router file in the `routes` directory is missing, preventing a complete assessment of Exercise 1.  The provided code only shows the `app.js` setup.
+- Exercise 2 and 3 lack implementation details in `todos.js` and `books.js` respectively.  The code only provides the structure and comments, not the actual CRUD operations.
+- Add error handling to gracefully handle cases where routes are not found or there are issues during database operations (for Exercises 2 and 3).
+- For Exercises 2 and 3, consider using a more robust database solution instead of an in-memory array like `todos` and `books`.  This would make the application more persistent and scalable.
+- Sanitize user inputs for Exercise 2 and 3 to prevent injection attacks (Cross-site scripting, etc.)
+- For production, use a process manager like PM2 to ensure better server uptime and process management.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_1/ExerciseXP/Exercise1/routes/index.js
+suggestions for improvement:
+- Add error handling for unexpected situations (e.g., database errors in Exercises 2 and 3).
+- Improve input validation in Exercises 2 and 3 to prevent vulnerabilities like injection attacks.
+- Use a more robust method for storing data than in-memory arrays (e.g., a database) in Exercises 2 and 3 for persistence and scalability.
+- Add comments to explain the purpose of each route handler in Exercises 2 and 3.
+- Consider using a more descriptive naming convention for routes (e.g., /todos instead of just /).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_1/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- The `todosRouter` is not implemented.  The provided code only sets up the Express app and routes requests to `/todos`, but lacks the actual logic for CRUD operations defined in `todos.js`.
+- The in-memory `todos` array is not ideal for a production environment. Consider using a database (e.g., MongoDB, PostgreSQL) for persistence.
+- Error handling is missing.  The application should gracefully handle errors (e.g., invalid input, database errors) and return appropriate HTTP status codes.
+- Input validation is absent. The application should validate incoming requests to prevent issues like injection attacks and unexpected behavior.
+- Security best practices are not fully implemented.  Consider using middleware for security measures, input sanitization, and protection against common vulnerabilities.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_1/ExerciseXP/Exercise2/routes/todos.js
+suggestions for improvement:
+- Add input validation to prevent common vulnerabilities like injection attacks (e.g., using parameterized queries if using a database, or input sanitization for in-memory storage).
+- Implement error handling for unexpected situations (e.g., database errors, invalid input formats).  The current error handling is minimal.
+- Consider using a more robust data structure than an in-memory array for production applications.  A database would be much better for persistence and scalability.
+- The `id` generation is simple; for a larger application, consider using a UUID library for better uniqueness and distribution.
+- Improve the `PUT` request to handle cases where the `id` is not found or is malformed.  Currently, it just returns 404, consider a more descriptive response.
+- Add more comprehensive testing to cover various scenarios and edge cases.  For example, test with empty inputs, very long inputs, invalid inputs, and test boundary conditions.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_1/ExerciseXP/Exercise3/app.js
+suggestions for improvement:
+- The `books.js` router file is missing.  The provided code only shows the `app.js` file and doesn't define the routes for creating, reading, updating, and deleting books as described in Exercise 3.
+- Error handling is missing. The code should include error handling for cases such as invalid input, database errors (though we are using in-memory storage here), and server errors.
+- Input validation is missing. The code should validate the input data before processing to prevent unexpected behavior or security vulnerabilities.  For example, checking if the book title is present and of appropriate length.
+- The in-memory database (`books` array) is not ideal for a production application. Consider using a proper database solution for persistence and scalability.
+- Security best practices should be applied, such as using parameterized queries (not applicable here directly due to in-memory db, but conceptually important) and protecting against common vulnerabilities like injection attacks (again, less critical with in-memory db but good practice).
+- Add comments to `app.js` explaining what each line does, especially the `app.use(express.json())` middleware.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_1/ExerciseXP/Exercise3/routes/books.js
+suggestions for improvement:
+- Implement input validation to prevent unexpected data or attacks (e.g., SQL injection, though not directly applicable here, the principle applies).  Sanitize user inputs.
+- Consider using a more robust data store than an in-memory array for production environments (e.g., a database like MongoDB or PostgreSQL). The current implementation loses data on server restart.
+- Add error handling for cases where the request body is missing required fields.
+- Improve the readability of the `router.put` and `router.delete` methods by using more descriptive variable names. For example,  `req.params.id` could be renamed to `bookId`.
+- The code lacks detailed comments explaining the purpose of each function and the overall logic.
+Correctness: 95%
+-----

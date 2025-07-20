@@ -1,0 +1,88 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise1/product.js
+suggestions for improvement:
+- The `products.js` file correctly exports the product array using CommonJS syntax.  However, the `shop.js` file (which is missing from the provided code) is crucial to completing Exercise 1.  The provided code only shows `products.js` which is only part of the solution.
+- Add the missing `shop.js` file which implements the product search and display functionality as described in Exercise 1.  This will complete the first exercise, raising the correctness score.
+- Consider adding error handling (e.g., `try...catch` blocks) to Exercise 3 (`fileManager.js`) to gracefully handle file I/O errors, like the file not existing.
+- Exercises 2, 4, 5, 6, and 7 are completely missing.  The evaluation can only be done with the provided code.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise1/shop.js
+suggestions for improvement:
+- The code should include the `products.js` file with sample product data for a complete, runnable example.
+- Error handling could be improved.  For example, what if `products` is undefined or empty? Consider adding checks for these scenarios and returning appropriate error messages instead of crashing.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- The code could include error handling for the case where the `persons` array is empty to prevent division by zero.  An empty array check before the `reduce` operation would improve robustness.
+- Consider adding a more descriptive variable name than `people` in the `calculateAverageAge` function (e.g., `persons` to maintain consistency).
+- While the code is functionally correct and readable, adding comments explaining the purpose of the `calculateAverageAge` function would enhance readability even further.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise2/data.js
+suggestions for improvement:
+- The code only addresses Exercise 2.  The other exercises are missing.
+- The code should include the average age calculation and printing as specified in Exercise 2.
+- Consider adding error handling (e.g., for cases where the input data is invalid or the file doesn't exist) to enhance robustness.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise3/app.js
+suggestions for improvement:
+- The `fileManager.js` module is missing from the provided code snippet.  The solution assumes its existence and correct implementation of `readFile` and `writeFile` functions which handle potential errors like file not found.
+- Add error handling (try...catch blocks) to the `app.js` to gracefully handle cases where the files don't exist or cannot be read/written. This is crucial for robustness and prevents unexpected crashes.
+- Add asynchronous operations using promises or async/await in `fileManager.js` for better performance and non-blocking behavior.  The provided synchronous approach can freeze the application during file operations.
+- Consider using more descriptive variable names. For example, instead of `content`, use `fileContent`.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise3/fileManager.js
+suggestions for improvement:
+- Add error handling to `readFile` and `writeFile` functions.  The current implementation will crash if the file doesn't exist or if there's an issue writing to the file.  Use `try...catch` blocks and handle potential errors (e.g., `fs.readFile`, `fs.writeFile`).
+- Consider using asynchronous versions of `fs.readFile` and `fs.writeFile` for better performance in larger applications. The synchronous versions block the event loop, which can cause performance issues.
+- The code only addresses Exercise 3.  The other exercises are not included.  To receive a higher correctness score, the code should implement the other exercises as well.
+- Add input validation to prevent unexpected behavior or security vulnerabilities. For instance, ensure the file paths provided to the functions are valid and do not allow traversal outside the intended directory.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise4/app.js
+suggestions for improvement:
+- The `todo.js` file (which is not provided) is crucial for a complete assessment.  The provided code only shows the usage of a `TodoList` class, assuming its functionality is correctly implemented in `todo.js`. Without seeing `todo.js`, it's impossible to fully verify correctness. 
+- Add error handling to `TodoList` methods (in the missing `todo.js` file) to gracefully handle edge cases and invalid inputs (e.g., attempting to mark a non-existent task as complete).
+- Consider adding more robust testing for the `TodoList` class in `todo.js` to cover all possible scenarios and edge cases.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise4/todo.js
+suggestions for improvement:
+- The code is well-structured and easy to understand.  Consider adding error handling (e.g., for the `markComplete` function if a task is not found).
+- Adding input validation to `addTask` to prevent empty tasks or tasks with only whitespace would improve robustness.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise5/app.js
+suggestions for improvement:
+- The provided code does not address any of the exercises described in the chapter content. It uses lodash and a custom math module, which is covered in Exercise 5, but it does not complete that exercise fully.  It's missing the `npm init` and `npm install lodash` steps, and it doesn't showcase a complete custom module implementation.
+- The code should be restructured to solve at least one of the exercises in the chapter.  For example, it could implement Exercise 5 completely by adding the missing steps for creating the project and fully implementing the `math.js` module.
+- Add error handling to the `math` module functions in Exercise 5 to handle invalid inputs.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise5/math.js
+suggestions for improvement:
+- The provided code defines functions for addition and multiplication, but it does not address any of the exercises outlined in the chapter content.  It needs to be replaced with code that solves at least one of the exercises (e.g., Exercise 5, which involves creating a custom module with addition and multiplication functions and using it in conjunction with lodash).
+- The chapter focuses on working with Node.js modules, the `fs` module, and using npm packages like `lodash` and `chalk`. The provided code only implements simple mathematical functions and does not demonstrate any of these key concepts.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise6/app.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise7/copy-file.js
+suggestions for improvement:
+- Add error handling for file reading and writing operations.  The current code will crash if `source.txt` doesn't exist or if there's a permissions issue.
+- Consider using `fs.promises` for asynchronous file operations, which would be more efficient for larger files and prevent blocking the main thread.
+- The code only addresses part of Exercise 7. It completes the file copying portion but omits the directory reading part (`read-directory.js`).
+- Add comments explaining what each part of the code does. This would improve readability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_4/ExerciseXP/Exercise7/read-directory.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----

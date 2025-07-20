@@ -1,0 +1,30 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/Mini-project/app/app.js
+suggestions for improvement:
+- Implement input sanitization to prevent XSS attacks and other vulnerabilities.  Currently, user input is directly used in the JSON responses, which could be exploited.
+- Use a more robust and efficient ID generation method instead of `Date.now().toString()`.  This method is susceptible to collisions, especially under high load. Consider using a UUID library.
+- Add logging to track errors and monitor API usage. This will help diagnose issues and improve performance.
+- The error handling could be improved by providing more specific error messages.
+- Improve the use of async/await for file operations to prevent blocking the event loop.
+- Consider using a database instead of JSON file storage for better scalability and performance.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/Mini-project/app/tasks.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/Mini-project/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which is a dependency management file for npm (Node Package Manager). It doesn't contain any code that implements the task management API as described in the chapter content.  To receive a correctness score, you need to provide the actual Express.js code that creates and manages the API.
+- Add error handling for file I/O operations (reading and writing `tasks.json`).
+- Implement input validation to ensure tasks have the required fields (e.g., a title).
+- Use a more robust data store than a simple JSON file for production applications (e.g., a database).
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/Mini-project/package.json
+suggestions for improvement:
+- This is a `package.json` file, not an implementation of the task management API.  The chapter requires an Express.js application with specific routes for creating, reading, updating, and deleting tasks from a JSON file.
+- The `package.json` correctly lists Express.js as a dependency, which is a good start, but the actual code for the API routes is missing.
+- Add the actual server code including routes for GET /tasks, GET /tasks/:id, POST /tasks, PUT /tasks/:id, DELETE /tasks/:id.  Implement JSON file handling (reading, writing) and input validation.
+Correctness: 0%
+-----

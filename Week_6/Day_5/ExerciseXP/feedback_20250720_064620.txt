@@ -1,0 +1,26 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_5/ExerciseXP/Exercise1/server.js
+suggestions for improvement:
+- Implement proper input validation to prevent issues like unexpected data types or malicious input.
+- Consider using a more robust data storage solution instead of an in-memory array for production environments.  A database would be more suitable for persistence and scalability.
+- Add more comprehensive error handling, including handling potential errors during data manipulation (e.g., `req.body` might be missing).
+- Improve the code's security by sanitizing user inputs to prevent injection attacks (e.g., using a library like DOMPurify if you were handling HTML content).
+- The `id` generation in `app.post` could be improved. A unique ID generator library might be a better solution to prevent collisions.
+- Add more descriptive error messages to the client to help with debugging. The current error messages are minimal.
+- For better readability, consider separating the route handlers into individual modules.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_5/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- Implement UPDATE and DELETE functionalities as requested in Exercise 2.
+- Add input validation to prevent unexpected data or attacks.  For example, check for the existence of required fields in the POST request and sanitize user inputs.
+- Consider using a more robust data store than an in-memory array (like a database) for production-level applications.  This in-memory array will lose all data on server restart.
+- Improve error handling.  Currently, it only handles 404 errors for the GET /api/books/:bookId route. More comprehensive error handling should be implemented across all routes, catching potential issues like invalid input data.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_5/ExerciseXP/Exercise3/dataservice.js
+suggestions for improvement:
+- Add error handling within `fetchPosts` to gracefully handle network errors or API failures.  This could involve a `try...catch` block and returning an appropriate error object or throwing an error.
+- Consider adding more descriptive variable names (e.g., instead of `response`, perhaps `apiResponse` ).
+- For production, explore using a more robust HTTP client with features like retries and circuit breakers for enhanced reliability.
+Correctness: 100%
+-----
