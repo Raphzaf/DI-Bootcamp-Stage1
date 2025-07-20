@@ -1,0 +1,26 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_5/DailyChallenge/Emoji-Game/public/index.html
+suggestions for improvement:
+- The HTML file only provides the frontend structure.  The core functionality (handling game logic, communication with an Express server via Fetch API) is missing.  The chapter requires building an Express API, which is absent here.
+- The `script.js` file (not provided) is crucial to implementing the game logic, including the Fetch API calls for POST requests and score updates.  Without it, the correctness is severely impacted.
+- Add error handling (e.g., handling network errors during Fetch requests).
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_5/DailyChallenge/Emoji-Game/public/script.js
+suggestions for improvement:
+- Implement server-side code for the `/api/question`, `/api/guess`, and `/api/leaderboard` endpoints to handle the game logic, including emoji selection, guess checking, score updates, and leaderboard management.
+- Add error handling to the fetch calls to gracefully handle network issues or server errors.
+- Improve security by sanitizing user inputs (especially the player's name) before storing them in the leaderboard.
+- Consider using a more robust method for storing the leaderboard (e.g., a database) instead of relying solely on in-memory storage (which will lose the data on server restarts).
+- The code lacks the implementation of  the leaderboard. It only includes the client-side logic for displaying the leaderboard data, assuming that this data is provided by the server.  The server-side implementation of the leaderboard is missing.
+- The code uses simple buttons for options. Consider using radio buttons for better user experience and to ensure only one option can be selected at a time.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_5/DailyChallenge/Emoji-Game/server.js
+suggestions for improvement:
+- Implement client-side handling for displaying the emoji and options, submitting the guess using Fetch API, and receiving and displaying feedback. The provided code only focuses on the server-side.
+- Add input sanitization to prevent XSS vulnerabilities.  The code currently accepts user input without any validation or escaping.
+- The leaderboard is stored in-memory.  Implement persistent storage (e.g., using a database or file system) to make the leaderboard persistent across server restarts.
+- Improve the random option selection algorithm to avoid potential biases.  The current method might sometimes select the same options repeatedly.
+- Add error handling to gracefully manage potential issues, such as invalid input or database errors.
+Correctness: 90%
+-----
