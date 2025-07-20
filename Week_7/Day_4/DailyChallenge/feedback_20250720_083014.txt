@@ -1,0 +1,14 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_4/DailyChallenge/App.js
+suggestions for improvement:
+- Use the image URLs provided in the instructions instead of replacing them with different ones.
+- Consider adding more styling to improve the visual appeal of the carousel and its captions.
+- Add error handling for cases where images fail to load.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_4/DailyChallenge/index.js
+suggestions for improvement:
+- This code only renders a React app.  It's missing the crucial part: the implementation of the carousel using `react-responsive-carousel` and the image URLs provided in the instructions.
+- The `App.js` file is missing, which is where the carousel component would be built.
+- Add the necessary imports for `react-responsive-carousel` and import the image URLs.
+Correctness: 0%
+-----
