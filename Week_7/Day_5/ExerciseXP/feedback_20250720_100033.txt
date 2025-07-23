@@ -1,0 +1,42 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_5/ExerciseXP/Exercise2/Components/Events.js
+suggestions for improvement:
+- The code could be slightly improved by using more descriptive variable names (e.g., instead of `isToggleOn`, consider `powerStatus` or a similar name).
+- Consider adding comments to further explain the logic within each section (Part I, II, III).  While the structure is clear, additional comments improve overall maintainability.
+- Add error handling or input validation for the text input field to prevent unexpected behavior from unusual inputs.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_5/ExerciseXP/Exercise2/app.js
+suggestions for improvement:
+- The provided code only implements a small part of the exercises.  It creates an App component that renders an Events component, but doesn't include any of the Car, Garage, Phone, or Color components, which are major parts of Exercises 1, 3, and 4.
+- The Events component (not shown) needs to be fully implemented to address all parts of Exercise 2 (click event, keyDown event, toggle button).
+- Exercise 1 (Car and Garage components) is missing entirely.
+- Exercise 3 (Phone component) is missing entirely.
+- Exercise 4 (Color component with useEffect) is missing entirely.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_5/ExerciseXP/Exercise3/app.js
+suggestions for improvement:
+- The provided code only imports and renders a `Phone` component, which is not defined in this code snippet.  The exercises require the implementation of multiple components (`Car`, `Garage`, `Events`, `Color`), event handling, and state management. The code completely lacks this core functionality. 
+- Add the implementations for `Car`, `Garage`, `Events`, `Color` components as described in the exercises. Each component should have its specific functionality (event handlers, state updates, etc.).
+- Implement the `useState` hook for state management and event handlers as instructed in Exercise 2 and 3. 
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_5/ExerciseXP/Exercise3/components/Phone.js
+suggestions for improvement:
+- The exercise description mentions using a class component for Exercise 3, while this code uses a functional component with hooks.  The functional component approach is fine and often preferred, but it deviates slightly from the instructions.
+- Add more robust error handling and input validation where appropriate in future exercises. For example, prevent users from entering invalid input into the input field in Exercise 2 (Part II).
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_5/ExerciseXP/Exercise4/app.js
+suggestions for improvement:
+- The provided code doesn't implement any of the exercises described in the Chapter Content/Questions.  It only imports and renders a `Color` component, which is not defined within the provided code snippet. The exercises involve creating multiple components (`Car`, `Garage`, `Events`, `Phone`), handling events, using state, and implementing lifecycle methods (or their functional component equivalents using `useEffect`).  The code provided does none of these.
+- To receive a non-zero correctness score, the code should implement at least one of the exercises (Exercise 1, 2, 3, or 4) as described in the instructions.
+- Add the implementation of the `Color` component (Exercise 4) to make the code functional.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_5/ExerciseXP/Exercise4/components/color.js
+suggestions for improvement:
+- The instructions mention alerting 'useEffect reached' after the component is rendered.  This is missing from the code.
+- While the code functions correctly for changing the color, the visual representation of the color change isn't explicitly detailed in the instructions. Adding more visual cues for the color changes (beyond the text) might enhance clarity.
+Correctness: 80%
+-----

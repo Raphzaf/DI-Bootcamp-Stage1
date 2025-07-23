@@ -1,0 +1,12 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_1/Day_4/ExerciseXP/main.py
+suggestions for improvement:
+- In Exercise 4, the user doesn't input a number; it's randomly generated. The instructions mention the user providing a number between 1 and 100.
+- Exercise 7's temperature advice ranges could be more precise and cover the entire temperature spectrum. For example, the range between 10 and 16 is now split into two ranges (0-9, 10-16). This results in more categories.
+- In Exercise 7,  consider adding error handling for invalid user input (non-numeric input, etc.).
+- Add docstrings to all functions to improve readability and explain their purpose, parameters, and return values.
+Brief justification:
+- correctness: The code correctly implements Exercises 1, 2, 3, 5, 6, and partially 7.  Exercise 4 deviates by generating both numbers randomly instead of letting the user input one. Exercise 7 fulfills the core requirement but could be improved by better range definitions and error handling. All functions produce the expected output based on the given input.
+- readability: The code is generally readable.  Variable and function names are descriptive. However, adding docstrings would significantly improve clarity and understanding of function behavior.  The logic is straightforward in most exercises.
+- performance: The code's performance is efficient. The algorithms used are simple and have a time complexity of O(n) at most (for iterations). There are no unnecessary computations or data structures.
+- security: No security vulnerabilities were observed in the provided code. The code only interacts with user input in exercise 7 which has some potential for improvement (error handling).  No external data or libraries used introduce security risks in this context.
+

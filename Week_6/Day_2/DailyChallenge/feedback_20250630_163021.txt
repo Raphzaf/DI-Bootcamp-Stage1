@@ -1,0 +1,11 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_2/DailyChallenge/main.sql
+suggestions for improvement:
+- The code is well-structured and easy to follow.  Consider adding comments to explain the purpose of each query.
+- For better performance, especially with larger datasets,  optimize the subqueries.  For example, using EXISTS instead of NOT IN can sometimes improve performance.  The current implementation is fine for this small example though.
+- While the security is fine for this isolated example, in a production environment, you would want to sanitize user inputs to prevent SQL injection vulnerabilities if the data was coming from external sources.
+Brief justification:
+- correctness: The code accurately answers all four questions by executing the specified SQL queries.  Each query directly relates to the chapter content, focusing on SQL basics and table relationships (specifically, using subqueries and the NOT IN operator). The results correctly reflect the data in `FirstTab` and `SecondTab`.
+- readability: The SQL code is well-formatted and easy to understand.  The use of aliases (ft) enhances readability.  Adding comments would further improve readability, particularly for explaining the intent behind each query.
+- performance: The performance is acceptable for the small datasets provided. However, for larger datasets, the nested subqueries in the COUNT(*) statements might impact performance.  The use of `NOT IN` can be less efficient than `EXISTS` in some cases, especially with large datasets or many NULL values.  This is a minor concern given the size of the data provided.
+- security: No security vulnerabilities are present in the provided code because it's not interacting with external data sources. In a production setting, input sanitization would be crucial to prevent SQL injection attacks if data was being dynamically inserted into the queries.
+
