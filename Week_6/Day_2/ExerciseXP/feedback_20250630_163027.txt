@@ -1,0 +1,12 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_2/ExerciseXP/main.sql
+suggestions for improvement:
+- The code for Exercise 1 assumes table and column names that are not explicitly defined in the chapter content.  More robust code should handle potential variations in naming conventions or database schema.  Consider using parameterized queries or dynamic SQL to improve flexibility.
+- In Exercise 2, queries 7 and 8 rely on a user providing a specific movie title ('ACADEMY DINOSAUR').  A more generic solution would be more reusable. Query 9 also uses a specific title prefix; it should allow user input.
+- For Exercise 2, queries 10 and 11 use LIMIT, while the instructions suggest avoiding it for query 11. The bonus challenge of query 11 requires a different approach, perhaps using ROW_NUMBER() or similar window function.
+- Add comments to explain the purpose of each query, especially in Exercise 2 where multiple queries are involved. This would greatly enhance readability.
+Brief justification:
+- correctness: The SQL queries largely fulfill the requirements of both exercises.  Most queries correctly retrieve the requested data. However, the reliance on specific table/column names (Exercise 1) and hardcoded movie titles (Exercise 2) reduces the generality and reusability of the code, thus lowering the correctness score. The solution to problem 11 uses LIMIT despite the bonus challenge stating it shouldn't.
+- readability: The code is generally easy to read, with clear SQL syntax.  However, the lack of comments, especially in Exercise 2, decreases readability.  More descriptive variable names (if used) would further enhance this.
+- performance: The queries are generally efficient for the small to medium sized datasets mentioned; however, for larger datasets, using indexes or optimizing complex joins would improve performance. Using LIMIT repeatedly for pagination (Exercise 2, queries 10 and 11) can become inefficient for very large datasets.  Query 11's use of OFFSET could be improved. 
+- security: The provided code does not contain any obvious security vulnerabilities, as it only focuses on data retrieval.  There is no user input sanitization needed because no external inputs are being used in these specific queries. Assuming there are no injection vulnerabilities at the database layer itself.
+

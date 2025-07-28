@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_1/ExerciseXP/main.js
+suggestions for improvement:
+- In Exercise 1, Part I, question 5, the `slice` method's end index should be `people.length - 2` to exclude both Mary and the added name.  The current code only excludes the last element.
+- Exercise 1, Part II, question 1 could use a `for...of` loop for better readability.  The current `for...in` loop is slightly less intuitive for iterating over array elements.
+- Exercise 2's bonus part could be more concise by directly calculating the ordinal suffix within the loop instead of using a separate array.
+- Exercise 3 could benefit from input validation to handle non-numeric input more gracefully.
+- Exercise 6 could use template literals for a more readable string concatenation.
+- Add comments to explain the logic in more complex parts of the code (e.g., Exercise 4's rent calculation).
+Correctness: 95%
+-----

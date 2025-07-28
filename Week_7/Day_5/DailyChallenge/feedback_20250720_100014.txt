@@ -1,0 +1,14 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_5/DailyChallenge/Components/VotingApp.js
+suggestions for improvement:
+- The initial votes in the `useState` hook should be 0 as per the instructions.  Currently, they are pre-populated with values.
+- Consider using more semantic HTML elements instead of relying heavily on `div` elements and inline styles.  For example, use a `<button>` element instead of a `<div>` with a button style.
+- Improve styling using CSS classes instead of inline styles for better maintainability and separation of concerns.
+- Add error handling or a loading state to make the application more robust (although not explicitly required).
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_5/DailyChallenge/app.js
+suggestions for improvement:
+- The provided `App.js` file only renders a `VotingApp` component.  The core logic for the voting app (handling state, updating votes) is missing from this file and presumably resides in `VotingApp.js`, which is not provided. The instructions clearly state that the voting app logic should be implemented within `App.js`.
+- The `App.js` file itself is perfectly readable and well-structured, but it doesn't fulfill the requirements of the task.
+Correctness: 0%
+-----

@@ -1,0 +1,14 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_3/ExerciseXP/Exercise1/main.sql
+suggestions for improvement:
+- The code doesn't explicitly address all parts of Exercise 2.  It's missing queries for  questions 2, 4, 5, and 6. Add SQL queries to fulfill those requirements.
+- Add comments to the SQL queries to explain what each query is doing and its purpose, improving readability and maintainability. This is especially important for more complex queries in Exercise 2.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_3/ExerciseXP/Exercise2/main.sql
+suggestions for improvement:
+- Add comments to explain the purpose of each query.  This would greatly improve readability.
+- For Exercise 1, the code is missing the creation of the `new_film` table and the insertion of new films.  It also omits the creation of the `customer_review` table with the specified constraints and the addition of movie reviews.  Finally, it's missing the step to delete a film and observe the effect on the `customer_review` table.
+- The queries in Exercise 2 are functional but could benefit from error handling (e.g., checking for the existence of languages before updating).
+- Consider adding indexes to relevant columns to improve query performance, especially for larger datasets.  For example, indexing `return_date` in the `rental` table would speed up queries filtering on this column.
+Correctness: 80%
+-----

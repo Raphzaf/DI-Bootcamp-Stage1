@@ -1,0 +1,42 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/DailyChallenge/package-lock.json
+suggestions for improvement:
+- This `package.json` file does not contain any code that addresses the challenge.  It's a project metadata file.
+- The challenge requires creating React components (`App.js`, `FormComponent`), handling form input, updating state, and submitting data to the URL. This `package.json` provides no implementation of that.
+- Implement the React components and form handling logic as described in the challenge instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/DailyChallenge/package.json
+suggestions for improvement:
+- The provided `package.json` file is not relevant to the challenge.  It's a basic project setup file and doesn't contain any code that addresses the requirements of creating a React form, handling form data, or updating the URL.
+- The challenge requires implementing a React component (`App.js` and potentially `FormComponent`), handling form input changes using `handleChange`, and updating the URL on form submission.  None of this is present in the given `package.json`.
+- Implement the React components and `handleChange` function as described in the challenge instructions.  Then, use the browser's history API (e.g., `window.location.search = ...`) to update the URL with the form data after submission.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/DailyChallenge/public/index.html
+suggestions for improvement:
+- The provided HTML file only sets up the basic structure.  It lacks the React components and JavaScript code necessary to implement the form, handle changes, and update the URL as required by the challenge.
+- Add React components (App.js and FormComponent) to handle form data, state management, and URL updates.
+- Implement the `handleChange` function to update the component's state based on user input.
+- Use React's `useState` hook for state management.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/DailyChallenge/src/App.js
+suggestions for improvement:
+- The `FormComponent` component is missing from the provided code.  The challenge requires creating this component to display the form and input values.  Without it, the solution is incomplete.
+- The state includes `nutsFree` which is not part of the challenge requirements. It should be removed for accuracy to the assignment.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/DailyChallenge/src/FormComponent.js
+suggestions for improvement:
+- The `App.js` component, responsible for handling state and submission, is missing. The provided code only shows `FormComponent`, which is a crucial part but not the complete solution.
+- Add error handling for invalid input types (e.g., non-numeric age).
+- Improve styling for better accessibility and visual appeal.  Consider using a CSS framework or styled-components.
+- The `handleSubmit` function is not defined within `FormComponent`, which is missing from this code snippet.  The challenge requires passing data in the URL on submit. This missing component is a significant omission.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/DailyChallenge/src/index.js
+suggestions for improvement:
+- The provided code only renders the root element.  It lacks the `App.js` component and the `FormComponent` which are crucial for implementing the form functionality described in the challenge.
+- The challenge requires creating a stateful component in `App.js` to handle form data, a `handleChange` function to manage input changes, and passing the form data to the URL on submit.  None of this is present in the given code.
+Correctness: 0%
+-----

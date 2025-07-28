@@ -1,0 +1,100 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise1/public/index.html
+suggestions for improvement:
+- The provided code is only an HTML file.  It does not contain any React code to address the exercises.
+- The exercises require the implementation of React components (`BuggyCounter`, `ErrorBoundary`,  a component for Exercise 2, and a `Child` component for Exercise 3),  state management, lifecycle methods (`componentDidCatch`, `shouldComponentUpdate`, `componentDidUpdate`, `getSnapshotBeforeUpdate`, `componentWillUnmount`), and event handling (`onClick`). None of this is present in the provided HTML.
+- Add React code (JSX) within `<script>` tags or in separate `.js` files (e.g., `App.js`, `ErrorBoundary.js`) to implement the components and functionality described in the exercises.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise1/src/App.js
+suggestions for improvement:
+- Add more descriptive comments within the `BuggyCounter` and `ErrorBoundary` components to explain the logic and purpose of each method and state variable.
+- Consider using a more user-friendly error message in the `ErrorBoundary` component instead of simply displaying the error stack trace.  A custom message like 'Oops! Something went wrong.' with a button to refresh would improve the user experience.
+- In `App.js`, the explanatory text could be slightly improved for clarity. For example, instead of 'The counter is programmed to throw error when it reaches 5. This simulates a JavaScript error in a component.', consider 'This simulates a JavaScript error.  Clicking the counter until it reaches 5 will trigger the error handling.'
+- The styling could be enhanced for better visual presentation. Consider adding CSS to improve the layout and appearance of the counters and error messages.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise1/src/BuggyCounter.js
+suggestions for improvement:
+- The `ErrorBoundary` component is missing.  The instructions clearly state to create this component in a separate file and use it to wrap `BuggyCounter`. Without it, the error handling aspect of Exercise 1 is incomplete.
+- The provided code only implements `BuggyCounter`.  The simulations (1, 2, and 3) require the creation of an `ErrorBoundary` component and the rendering of multiple instances of `BuggyCounter` in different configurations, which are missing.
+- Exercise 2 (Lifecycle) is completely missing.  The code provided only addresses a portion of Exercise 1.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise1/src/ErrorBoundary.js
+suggestions for improvement:
+- The `BuggyCounter` component and the simulations (1, 2, and 3) are missing.  The provided code only implements the `ErrorBoundary` component, which is a crucial part but not the whole solution. The instructions explicitly require creating `BuggyCounter` and demonstrating the three simulations.
+- Add more descriptive error messages in the `ErrorBoundary` component. Instead of just "Something went wrong.", provide more context about the error that occurred, potentially including the component name where the error happened.
+- Consider adding a loading indicator to improve the user experience while waiting for the component to render.  A simple spinner would help improve the user experience while the `ErrorBoundary` is checking for errors.
+- The exercise descriptions for lifecycle methods (Exercise 2 and 3) mention adding console logs for debugging.  These logs are useful during development, but should be removed or conditioned (e.g., only enabled in development mode) before deployment to a production environment.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise1/src/index.js
+suggestions for improvement:
+- The provided code is a simple React app rendering component, but it does not contain any of the code for the exercises described in the chapter content. It's missing the implementation for `BuggyCounter`, `ErrorBoundary`, and the lifecycle methods exercises.
+- Add the implementation of `BuggyCounter`, `ErrorBoundary`, lifecycle methods (`shouldComponentUpdate`, `componentDidUpdate`, `getSnapshotBeforeUpdate`, `componentWillUnmount`), and event handlers as described in the exercises.
+- Structure the code into separate files (`App.js`, `ErrorBoundary.js`, etc.) for better organization.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise2/public/index.html
+suggestions for improvement:
+- The provided HTML file is just a basic HTML structure. It does not contain any React code to implement the exercises described in the chapter content.  The exercises require creating React components, handling state, implementing lifecycle methods (like `componentDidCatch`, `shouldComponentUpdate`, `componentDidUpdate`, `componentWillUnmount`, `getSnapshotBeforeUpdate`), and using error boundaries.  The provided HTML doesn't address any of these aspects.
+- To receive a non-zero correctness score, you need to provide the React code (App.js, ErrorBoundary.js, etc.) that implements the exercises. The HTML file alone is insufficient.
+- Add React code to implement the exercises described in the document, including error boundaries, lifecycle methods, and event handling.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise2/src/App.js
+suggestions for improvement:
+- The provided code does not address any of the exercises described in the chapter content.  It only shows a basic import and render of a component named `FavoriteColor`, which is not defined within the provided code snippet and is unrelated to the exercises on error boundaries, lifecycle methods, or event handlers.
+- The code needs to be expanded to include the `BuggyCounter`, `ErrorBoundary`, and updated `FavoriteColor` components as described in the exercises. 
+- Implement the three simulations for `ErrorBoundary` in `App.js`.
+- Implement the three parts of Exercise 2 (`shouldComponentUpdate`, `componentDidUpdate`, `getSnapshotBeforeUpdate`) within the `FavoriteColor` component (or a new component if necessary).
+- Implement Exercise 3, creating a `Child` component and handling the unmounting lifecycle method (`componentWillUnmount`).
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise2/src/FavoriteColor.js
+suggestions for improvement:
+- In Part II, add a div to display messages instead of only using console.log. This aligns better with the exercise's goal of showing updates in the UI.
+- In Part III, the exercise asks to use `getSnapshotBeforeUpdate` and `componentDidUpdate` together to display previous and current state.  The current implementation only logs to the console. Implement the UI changes as requested. The return value of `getSnapshotBeforeUpdate` is ignored.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise2/src/index.js
+suggestions for improvement:
+- **Exercise 1:** The `ErrorBoundary` component's error handling could be improved by providing more informative error messages to the user, instead of just displaying the raw error object.  Consider including a user-friendly message like 'Something went wrong! Our team is working on it.' along with a more subtle display of technical details for debugging purposes. 
+- **Exercise 1:**  The instructions for Simulation 3 are slightly misleading.  While the absence of an ErrorBoundary will lead to a crash, React's built-in error handling (red screen) may not perfectly match the provided screenshot. The description should acknowledge this possibility.
+- **Exercise 2 - Part I:** The exercise could be more explicit in specifying which component should use `shouldComponentUpdate()`.  Clearly stating that it's for the component from Exercise 2 of the previous day helps clarify the instructions.
+- **Exercise 2 - Part II & III:**  The instructions for Part II and III of Exercise 2 are somewhat vague.  Instead of just saying 'add a console.log', provide specific guidance on what information should be logged (e.g., 'Log the previous state and the new state in `componentDidUpdate()`').  It should also be clarified how the change in state triggers the update.
+- **Exercise 3:** The exercise is well-structured but could benefit from clearer instructions on how to handle the unmounting alert (e.g., specifying whether to use `alert` or a more React-friendly approach using a state variable to manage a visual message).
+- **General:** Add comments to explain the purpose of different code sections.  This would improve the readability significantly. Consistent indentation is also crucial for readability.  Consider using a linter to enforce consistent code style.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise2/src/style.css
+suggestions for improvement:
+- Exercise 1: The `ErrorBoundary` component's rendering of the error details could be improved for user experience.  Consider using a more user-friendly message instead of directly displaying the technical error details and stack trace. A simple 'Something went wrong' message with a suggestion to try again or contact support would be better.
+- Exercise 1: Add more robust error handling within the `BuggyCounter` component.  Currently, it only throws an error when the counter reaches 5. Consider handling potential errors in other parts of the component's logic.
+- Exercise 2, Part I: While the `shouldComponentUpdate` method works as intended, commenting on its use is important. For simple components, it might add unnecessary complexity.  It's good practice to document why you choose to use or not use this method.
+- Exercise 2, Part II and III:  The instructions ask to use `console.log` for the `componentDidUpdate` and `getSnapshotBeforeUpdate` methods. While this displays the messages in the developer console, it's not a user-facing indication.  Consider incorporating these logging messages into the UI for demonstration purposes.  This can easily be done by updating the component's state and rendering the log messages.
+- Exercise 3: The `Child` component's functionality is basic. Consider adding more complex unmounting logic to showcase various scenarios of `componentWillUnmount`. For instance, clearing timeouts or intervals, or canceling network requests would be valuable educational additions.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise3/App.js
+suggestions for improvement:
+- The code for Exercise 1 (Error Boundary) is missing.  The provided code only addresses Exercise 3 (Lifecycle #2) which focuses on the componentWillUnmount lifecycle method.
+- Exercise 2 (Lifecycle) is also missing.  The instructions for this exercise were quite extensive and covered shouldComponentUpdate, componentDidUpdate, and getSnapshotBeforeUpdate.
+- Add more descriptive comments within the code to enhance readability and explain the purpose of different sections.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise3/Child.js
+suggestions for improvement:
+- The provided code only addresses Exercise 3 (Lifecycle #2).  Exercises 1 and 2 are missing entirely.
+- Exercise 3's implementation is almost complete but lacks the 'Delete' button functionality to toggle the 'show' state and trigger unmounting.
+- Add error handling within the `componentWillUnmount` method to prevent unexpected behavior if an error occurs during the unmounting process.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_8/Day_1/ExerciseXP/Exercise3/index.js
+suggestions for improvement:
+- The provided code only renders the App component.  It doesn't contain the implementation for the exercises described in the chapter content.  The exercises require creating components like `BuggyCounter` and `ErrorBoundary`, implementing lifecycle methods (`componentDidCatch`, `shouldComponentUpdate`, `componentDidUpdate`, `getSnapshotBeforeUpdate`, `componentWillUnmount`), and handling events.
+- Implement the `BuggyCounter`, `ErrorBoundary`, and other components as described in the exercises. Add the necessary lifecycle methods and event handlers.
+- Add the logic for the three simulations in Exercise 1, showing how error boundaries work.
+- Implement the lifecycle method exercises in Exercise 2, demonstrating `shouldComponentUpdate`, `componentDidUpdate`, and `getSnapshotBeforeUpdate`.
+Correctness: 0%
+-----

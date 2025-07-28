@@ -1,0 +1,47 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/DailyChallenge/user-api/server.js
+suggestions for improvement:
+- The code only sets up the Express.js application and defines a route to userRoutes.  It lacks the crucial implementation of user registration, login, and database interaction using Knex and bcrypt as specified in the instructions.
+- The `userRoutes` file is missing; the code doesn't demonstrate functionality to handle POST /register, POST /login, GET /users, GET /users/:id, and PUT /users/:id routes.
+- Database interaction (Knex.js) is entirely absent.  The code doesn't create the `users` and `hashpwd` tables or execute any database queries.
+- Bcrypt is not used for password hashing and verification.
+- Transaction management (for adding users) is not implemented.
+- Error handling is missing. The application lacks mechanisms to handle potential errors during database operations or route handling.
+- The directory structure is not completely implemented.  The code only shows the main app file, other directories and files are implied but not present.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/DailyChallenge/user-api/server/config/db.js
+suggestions for improvement:
+- The provided code only sets up a database connection using Knex.js. It does not implement any of the Express.js API routes, user registration, login, password hashing with bcrypt, or user management functionalities described in the Chapter Content/Questions.
+- The database credentials are hardcoded, which is a major security risk.  These should be stored securely, such as using environment variables.
+- The code lacks error handling.  Database connections can fail, and the application should gracefully handle these situations.
+- The `users` and `hashpwd` table schemas are not defined.  The code should create these tables with the specified columns.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/DailyChallenge/user-api/server/controllers/userControllers.js
+suggestions for improvement:
+- The code uses a single `users` table instead of separate `users` and `hashpwd` tables as specified.
+- Implement transaction for user creation to ensure atomicity.
+- Add input validation to prevent vulnerabilities like SQL injection and ensure data integrity.
+- Improve error handling for more informative messages to the client.
+- Consider using a more robust method for handling IDs, such as UUIDs, to avoid potential collisions.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/DailyChallenge/user-api/server/models/userModel.js
+suggestions for improvement:
+- The API endpoints (POST /register, POST /login, GET /users, GET /users/:id, PUT /users/:id) are missing.  The provided code only offers database functions.
+- Error handling is missing. The code should handle potential database errors and return appropriate error responses.
+- The separation of `users` and `hashpwd` tables is concerning from a security perspective. Storing passwords separately is unusual and potentially less secure than integrating the hashed password directly into the `users` table.
+- Input validation is missing. The code should validate user inputs to prevent SQL injection and other vulnerabilities.
+- Bcrypt is not explicitly used in this code snippet.  The code lacks the hashing and comparison steps required by bcrypt for password security.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_2/DailyChallenge/user-api/server/routes/userRoutes.js
+suggestions for improvement:
+- The code only provides the routing structure.  The actual implementation of user registration, login, and data handling within the `userController` is missing.  This needs to be provided for a complete assessment.
+- The database interaction (using Knex) is not shown.  The code only defines routes, which are incomplete without the database connection and queries.
+- Password hashing using bcrypt is mentioned but not implemented in this code snippet. The `userController` needs to include bcrypt for secure password handling.
+- Error handling and input validation are absent.  Robust error handling and input sanitization are crucial for security and user experience.
+- Transactions for adding users are not implemented.  The code lacks the transaction logic to ensure atomicity in user creation.
+- The schema for the `users` and `hashpwd` tables is not defined.  The code lacks the database schema definition required to create the tables.
+Correctness: 80%
+-----
