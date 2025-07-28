@@ -1,0 +1,90 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/package.json
+suggestions for improvement:
+- This JSON file is a `package.json` file for a Node.js project. It does not contain any code related to the Redux application described in the chapter content.  It needs to be replaced with actual Redux code that implements the tasks, reducers, selectors, and components described.
+- Add Redux related packages (redux, react-redux) to the dependencies in package.json
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/public/index.html
+suggestions for improvement:
+- This HTML file only provides a basic structure for a React application.  It doesn't contain any of the Redux logic, components (TaskList, CategorySelector), reducers, actions, or selectors described in the instructions.  The core functionality of the assignment is completely missing.
+- Add React code, Redux Toolkit setup, reducers, actions, selectors, and components (TaskList and CategorySelector) as specified in the instructions.
+- Implement `createSelector` for `selectTasksByCategory`, `selectCompletedTasks`, and `selectCategoryById`.
+- Use `useSelector` and `useCallback` within the components as instructed.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/src/App.js
+suggestions for improvement:
+- Implement Redux store, reducers, and actions as specified in the instructions.  The provided code only uses a basic `addTask` action, lacking actions for editing, deleting tasks and categories, updating task progress. It also omits the Redux store setup.
+- Implement selectors using `createSelector` for `selectTasksByCategory`, `selectCompletedTasks`, and `selectCategoryById`.
+- Use `useSelector` hook within `TaskList` and `CategorySelector` components to fetch and display data from the Redux store.
+- Implement task editing and completion functionality using `useCallback` for optimization.
+- Add error handling for potential issues such as missing categories or invalid data.
+Correctness: 60%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/src/app/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store.  It's missing the crucial parts: actions, reducers (beyond the placeholder imports), selectors, and the components (`TaskList`, `CategorySelector`).
+- The `tasksReducer` and `categoriesReducer` are placeholders.  Actual reducer logic for adding, editing, deleting tasks and categories, and updating task progress is needed.
+- Selectors (`selectTasksByCategory`, `selectCompletedTasks`, `selectCategoryById`) using `createSelector` are missing. 
+- Implement `TaskList` and `CategorySelector` components using `useSelector` and `useCallback` as specified.
+- Add detailed comments explaining the purpose of each reducer action and state change.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/src/features/categories/CategorySelector.js
+suggestions for improvement:
+- The component assumes the categories are already fetched and in the Redux store.  Add error handling or loading state to improve robustness.
+- Add prop types validation to `CategorySelector` for better type safety and maintainability.  Specifically, check for `selected` being a number and `onChange` being a function.
+- Consider adding accessibility improvements such as ARIA attributes to the select element for better user experience with assistive technologies.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/src/features/categories/categoriesSlice.js
+suggestions for improvement:
+- The code only implements the category management portion of the task.  It's missing the task management (add, edit, delete tasks, update task progress), selectors (`selectTasksByCategory`, `selectCompletedTasks`, `selectCategoryById`), and the React components (`TaskList`, `CategorySelector`).
+- The `nextCategoryId` variable is a global variable.  It should be managed within the Redux state for better predictability and testability.
+- Error handling is missing. For example, what happens if `editCategory` is called with an ID that doesn't exist?
+- The `editCategory` reducer could be improved by using `findIndex` for better performance on large arrays.
+- Add unit tests to verify the functionality of the reducers.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/src/features/tasks/TaskList.js
+suggestions for improvement:
+- The code only implements the `TaskList` component and doesn't include the `CategorySelector` component as required.
+- It lacks the Redux store setup, reducers, actions, and other selectors (`selectCompletedTasks`, `selectCategoryById`) specified in the instructions.
+- Error handling (e.g., for cases where `categoryId` is invalid or `tasks` is empty) is missing.
+- Add input validation to prevent XSS vulnerabilities if tasks titles are user inputs.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/src/features/tasks/taskSelectors.js
+suggestions for improvement:
+- The provided code only implements three selectors (selectTasksByCategory, selectCompletedTasks) out of the four requested in the instructions (missing selectCategoryById).
+- The code lacks the Redux store setup, actions, reducers, and UI components (TaskList and CategorySelector) which are explicitly mentioned in the instructions.
+- While `createSelector` is used effectively for memoization in the existing selectors,  the performance could be improved by considering more sophisticated memoization strategies for very large datasets. For example, using reselect's `createSelector` with more fine-grained input selectors could help avoid unnecessary re-computations.
+- Add error handling for cases where categoryId might be invalid or undefined in `selectTasksByCategory` to improve robustness.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/src/features/tasks/tasksSlice.js
+suggestions for improvement:
+- Implement categories management: The code only handles tasks, missing actions and reducers for adding, editing, and deleting categories as specified in the instructions.
+- Add selectors:  The instructions explicitly require the creation of selectors (`selectTasksByCategory`, `selectCompletedTasks`, `selectCategoryById`) using `createSelector`. These are missing.
+- Use `createSelector` for performance: While the current reducers are relatively simple, using `createSelector` for the required selectors would significantly improve performance for larger datasets by memoizing results.
+- Implement TaskList and CategorySelector components: The code lacks the functional components `TaskList` and `CategorySelector` that utilize `useSelector` and `useCallback` as instructed.
+- Improve `addTask` reducer: The `nextTaskId` variable is globally scoped which is not ideal. A better approach would be to manage it within the reducer or use a library that generates unique IDs.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/src/index.css
+suggestions for improvement:
+- The provided code is only CSS styling.  It does not implement any of the Redux functionality, actions, reducers, selectors, or components described in the instructions.
+- The instructions require a Redux-based productivity tracker application.  This CSS provides a basic visual style, but lacks the core application logic.
+- Implement Redux store, actions, reducers, selectors (`createSelector`), and components (`TaskList`, `CategorySelector`) using `useSelector` and `useCallback` as instructed.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_5/DailyChallenge/src/index.js
+suggestions for improvement:
+- The provided code only renders the application.  It lacks the Redux store setup, reducers, actions, selectors, and components (TaskList, CategorySelector) specified in the instructions.
+- Implement the Redux store with reducers for tasks and categories, including initial states.
+- Create actions for adding, editing, deleting tasks and categories, and updating task progress.
+- Implement reducers to handle these actions and update the state appropriately.
+- Implement selectors using `createSelector` for selecting tasks by category, counting completed tasks, and selecting categories by ID.
+- Create TaskList and CategorySelector functional components using `useSelector` and `useCallback` as instructed.
+Correctness: 0%
+-----
