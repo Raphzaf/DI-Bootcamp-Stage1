@@ -1,0 +1,66 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/DailyChallenge/package.json
+suggestions for improvement:
+- This is a `package.json` file, not a React application.  It doesn't contain any code that addresses the daily challenge requirements.
+- The chapter requires creating a React app with Redux Toolkit, Thunk, and specific components (AgeDisplay, AgeControls) to manage asynchronous age updates. This file provides only a basic project structure.
+- Implement the Age Tracker app as described in the chapter instructions. This includes creating the necessary React components, Redux store, reducers, and asynchronous actions using `createAsyncThunk`.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/DailyChallenge/public/index.html
+suggestions for improvement:
+- This HTML file only provides a basic HTML structure.  It's missing all the React components, Redux store setup, and logic described in the chapter instructions.  The instructions clearly state to build an Age Tracker app using React, Redux Toolkit, and Thunk. This HTML file is a blank template and doesn't implement any of the required functionality.
+- Add React components (AgeDisplay, AgeControls), Redux store configuration with createSlice and createAsyncThunk, and the necessary logic to handle age increment/decrement asynchronously.  Include loading state management.
+- Implement the asynchronous actions using `setTimeout` to simulate delays as specified.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/DailyChallenge/src/App.js
+suggestions for improvement:
+- The provided code only creates a basic app structure with placeholders for `AgeDisplay` and `AgeControls` components. It doesn't implement any of the Redux Toolkit, Thunk, or asynchronous action logic specified in the chapter instructions.
+- The code needs to implement the `AgeDisplay` and `AgeControls` components, including the Redux store, reducers, actions (using `createAsyncThunk`), and the loading state handling as described in the chapter.
+- The `ageUpAsync` and `ageDownAsync` actions should use `setTimeout` to simulate asynchronous operations.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/DailyChallenge/src/app/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store.  It's missing the crucial parts: the `ageSlice` (the reducer), the async thunks (`ageUpAsync`, `ageDownAsync`), and the React components (`AgeDisplay`, `AgeControls`).  The instructions explicitly ask for these components and the asynchronous action creators using `createAsyncThunk`.
+- Add error handling to the async thunks.  What happens if `setTimeout` throws an error?  Consider using `try...catch` blocks.
+- The `ageSlice` should include a loading state to show a loading indicator in the UI while the age is being updated. This is explicitly mentioned in the instructions.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/DailyChallenge/src/features/age/AgeControls.js
+suggestions for improvement:
+- The `AgeDisplay` component is missing, which is crucial for displaying the age and loading indicator as specified in the instructions.
+- Error handling is missing.  The `ageUpAsync` and `ageDownAsync` thunks should ideally handle potential errors during the asynchronous operations (though the instructions don't explicitly demand this).
+- The styling is minimal.  Consider adding more robust styling for better presentation.
+- The instructions mention using a loading indicator.  This component should incorporate a visual indicator (like a spinner) while the age is being updated.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/DailyChallenge/src/features/age/AgeDisplay.js
+suggestions for improvement:
+- The `AgeDisplay` component correctly displays the age and loading indicator as specified. However, it doesn't handle potential errors during the asynchronous operations.  Adding error handling would improve robustness.
+- The instructions mention creating `AgeControls` component. This code only provides `AgeDisplay`.  The complete solution requires the implementation of the `AgeControls` component to handle the button clicks and dispatch the actions.
+- The spinner image path (`../../assets/spinner.svg`) should be verified and adjusted according to the project structure.
+- Consider using styled-components or a CSS framework for better styling instead of inline styles.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/DailyChallenge/src/features/age/ageSlice.js
+suggestions for improvement:
+- The `ageDownAsync` reducer has a bug: it should subtract, not add, the payload.  It currently adds a negative value, which is functionally equivalent to subtracting, but not semantically correct.
+- Add error handling to the async thunks.  Currently, if the `setTimeout` fails (though unlikely), there's no mechanism to handle it. Consider using `try...catch` blocks.
+- Consider adding a separate 'error' state to the reducer to handle potential errors during the asynchronous operations, and display an appropriate message in the UI.
+- The code is missing the UI components (AgeDisplay and AgeControls) and the Redux store setup with Provider.  This code only provides the Redux logic.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/DailyChallenge/src/index.css
+suggestions for improvement:
+- This code only provides CSS styling.  It does not implement any of the React, Redux Toolkit, or Thunk functionality described in the chapter.  The challenge requires building a complete React application with Redux Toolkit to manage asynchronous age updates.
+- The CSS is reasonably readable and well-structured.  Consider adding more specific selectors for better maintainability if the project expands.
+- There are no performance concerns with the given CSS.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/DailyChallenge/src/index.js
+suggestions for improvement:
+- This code only sets up the Redux store and renders the App component.  It doesn't implement any of the functionality described in the chapter, such as the ageUpAsync, ageDownAsync actions, the age reducer, the AgeDisplay and AgeControls components, or the loading state handling.
+- The chapter explicitly requires creating asynchronous actions using `createAsyncThunk`, a reducer using `createSlice`, and specific components (AgeDisplay and AgeControls).  This code provides none of that.
+- Add the Redux Toolkit features (createAsyncThunk, createSlice) and components to implement the age tracker application as described in the chapter instructions.
+Correctness: 0%
+-----
