@@ -1,0 +1,315 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/package.json
+suggestions for improvement:
+- This is only a `package.json` file.  It doesn't contain any code to implement the functionality described in the Chapter Content/Questions.  A full implementation of the collaborative storytelling app, including backend, frontend, database schema, authentication, and deployment, is needed to assess those aspects.
+- Add scripts for starting the backend and building the frontend as specified in the chapter content (e.g., `npm run build`, `npm start`).
+- Include necessary dependencies in the `package.json` file (express, pg, bcrypt, jsonwebtoken, dotenv, cors, etc.).
+- The project structure should include  `backend` and `frontend` directories and a `types` directory as specified.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/sql/001_init.sql
+suggestions for improvement:
+- The SQL code lacks the creation of refresh tokens and the handling of access token expiration, which are crucial elements of the JWT-based authentication specified in the chapter.
+- The code doesn't implement the full CRUD operations and RESTful endpoints required by the instructions, specifically for the contributors.
+- Error handling and input sanitization are missing from the database interactions. While the `ON DELETE CASCADE` is a good start regarding referential integrity, it doesn't address the potential for malicious SQL injection.
+- While indices are added, further performance optimizations are needed, especially for queries involving joins across tables. Query performance should be thoroughly tested with a reasonable data volume.
+- The `updated_at` timestamp should be updated automatically on each update, using `ON UPDATE CURRENT_TIMESTAMP`.
+- The `UNIQUE` constraint on `Contributors` table is a good security measure preventing duplicate contributors to a story.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/app.ts
+suggestions for improvement:
+- Implement error handling middleware to catch and gracefully handle errors throughout the application, preventing crashes and providing informative error messages without revealing sensitive details.
+- Add input sanitization and validation to all backend routes to prevent SQL injection vulnerabilities and protect against other malicious inputs.  Never trust user input.
+- Refactor the `cors` middleware to handle multiple origins more robustly. The current implementation might have unexpected behavior with multiple origins.
+- Add comprehensive logging throughout the backend to aid in debugging and monitoring.
+- Ensure the use of prepared statements or parameterized queries in all database interactions to prevent SQL injection vulnerabilities.
+- For production, refine the cookie configuration in `cors` middleware to enforce stricter security measures, aligning with best practices described in the Token Storage resource.
+- Add JWT token verification middleware to relevant routes and thoroughly test the authentication and authorization flows, including token refresh.
+- Implement refresh token functionality on the backend, handling the generation, storage (securely in an HTTP-only cookie), and verification of refresh tokens for seamless user experience.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/controllers/auth.controller.ts
+suggestions for improvement:
+- Add input validation beyond checking for empty fields.  Validate email format and password strength.
+- Implement more robust error handling.  Log errors for debugging purposes and provide more specific error messages to the client.
+- Consider using a more sophisticated approach to handling refresh tokens, potentially leveraging a database to store them and manage expiration.
+- The `sameSite` cookie attribute should be set to `strict` when appropriate for better security. Consider the implications carefully before setting it to `none`.
+- Add comments to explain the purpose and functionality of different code sections.
+- Refactor the cookie setting logic into a reusable helper function to improve code clarity and maintainability.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/controllers/contributors.controller.ts
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/controllers/stories.controller.ts
+suggestions for improvement:
+- Implement proper type safety for Request objects.  Avoid using `(req as any).user.id`. Create a properly typed Request interface that includes the user information.
+- Add input sanitization to prevent SQL injection vulnerabilities, even though parameterized queries are used.  Sanitize `title` and `content` before database interaction.
+- Improve error handling. While status codes are used, error messages could be more informative and consistent. Consider a centralized error handling mechanism.
+- The `updateStory` function could be optimized by combining the checks for story existence and authorization into a single query.
+- Add comprehensive logging for debugging and monitoring. Log requests, responses, and errors with sufficient detail.
+- Consider using transactions to ensure atomicity of database operations, especially for `createStory` and `updateStory`.
+- Add pagination to `getStories` to handle large datasets efficiently.  Otherwise performance will degrade as the number of stories increases.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/db/index.ts
+suggestions for improvement:
+- The provided code only shows a PostgreSQL database connection setup.  It's a small part of the overall project requirements.  The chapter specifies a full-stack application with authentication, CRUD operations, frontend development with React and Redux Toolkit, and deployment. This code is missing all the crucial elements.
+- Error handling is missing. The `pool` object doesn't include mechanisms to handle connection errors or query errors.  The chapter explicitly mentions the importance of graceful error handling.
+- Security needs significant improvement. While it uses `ssl` conditionally for production, this is insufficient.  The chapter emphasizes secure password storage with bcrypt and JWT authentication. This code doesn't implement either.
+- The `dotenv` configuration is good practice for managing sensitive information, but the code lacks implementation details for crucial aspects of the project, such as API routes, authentication middleware, and frontend interaction.
+- Add comprehensive logging for debugging and monitoring purposes. This will help in identifying and resolving issues efficiently.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/middleware/authenticateToken.ts
+suggestions for improvement:
+- The code lacks handling for refresh tokens and the associated logic for refreshing access tokens upon expiry.  The chapter explicitly requires this functionality for a seamless user experience.
+- Error handling could be improved. While it catches JWT verification errors, it doesn't provide specific details about the error (e.g., token expired vs. invalid signature). This could help debugging and improve user feedback. Consider logging errors for better debugging while still protecting sensitive information in production.
+- The security score is lowered because of the direct use of `process.env.JWT_SECRET` which is prone to exposure during development and potential issues in production environments if not properly managed.  Consider alternative secure configuration methods.
+- The type assertion `as { id: number }` is somewhat risky.  While functional, it bypasses TypeScript's type safety.  If the JWT payload structure changes, this could lead to runtime errors. A better approach would involve defining an interface for the payload and ensuring it conforms to that interface. 
+- Add input validation to ensure `authHeader` is a string before accessing its properties.  This improves robustness and handles unexpected input formats. 
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/routes/auth.routes.ts
+suggestions for improvement:
+- Add error handling to each route. The chapter explicitly states that all errors should be handled gracefully, and the app should never crash.  Include informative error messages without revealing technical details.
+- Implement input validation within the controllers (e.g., for `/register` and `/login`). The chapter emphasizes validating input on both the frontend and backend to prevent vulnerabilities.
+- For the `/logout` route, consider using a more secure method than just a POST request.  Perhaps clearing cookies server-side would enhance security.
+- The code lacks authorization middleware. The chapter requires middleware to check user permissions before allowing access to protected routes.
+- The `refreshAccessToken` route should be protected; otherwise, anyone could refresh tokens, compromising security.
+- Document the routes and their expected input/output. This aligns with the chapter's requirement for documentation.
+- Consider using a more descriptive route name than `r`.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/routes/contributors.routes.ts
+suggestions for improvement:
+- Add input validation to the controllers (addContributor, getContributors, removeContributor) to prevent common vulnerabilities like SQL injection and ensure data integrity.  The provided code only shows routing; the controllers themselves need to be examined for security.
+- Consider adding more specific error handling within the controllers and returning more informative error messages to the client.  Generic error messages aren't helpful for debugging.
+- Implement proper authorization checks within the controllers to ensure only authorized users can perform specific actions. The `authenticateToken` middleware only verifies authentication; authorization (checking permissions based on user roles or story ownership) is missing.
+- The route `/contributors/:id` for DELETE should probably use `/:storyId` to be consistent and clear. The `id` is ambiguous here.
+- Document the purpose and expected inputs/outputs of each route, as well as any authentication/authorization requirements, using JSDoc or similar.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/routes/stories.routes.ts
+suggestions for improvement:
+- The code lacks error handling.  It should include comprehensive error handling for database operations and JWT verification, returning appropriate HTTP status codes and informative error messages to the client.  The chapter explicitly states that the app should never crash and should return helpful messages without revealing technical details.
+- The `authenticateToken` middleware is assumed to exist, but it's not provided.  This middleware is crucial for security and should be included for a complete evaluation.  The chapter details its implementation.
+- The code doesn't implement authorization beyond authentication.  The chapter specifies the need for authorization to ensure that only the author or collaborators can modify stories.  Additional middleware is needed to check user roles or permissions before allowing modification.
+- The code assumes a specific database structure.  While the chapter specifies the database design, explicit interaction with the database isn't shown in this snippet.  Adding code to handle database interactions would improve correctness and completeness.
+- Add input validation to prevent vulnerabilities like SQL injection. The chapter explicitly mentions sanitizing user inputs on both the frontend and backend and avoiding SQL injections.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/src/server.ts
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/backend/tsconfig.json
+suggestions for improvement:
+- This code is a tsconfig.json file.  It's a configuration file for the TypeScript compiler, not an implementation of the collaborative storytelling app described in the chapter content.  It sets up the compiler options but doesn't contain any code related to authentication, database interactions, frontend development, or deployment, all of which are explicitly required in the chapter.
+- To receive a higher correctness score, provide the actual code for the backend and frontend applications, including the authentication, database interactions, CRUD operations, Redux implementation, and deployment scripts as outlined in the chapter's instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/index.css
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/index.html
+suggestions for improvement:
+- This HTML file is a basic Vite + TypeScript project setup. It doesn't contain any code related to the full-stack application described in the chapter content.  It only provides the basic structure for a React application.  No backend, authentication, database interactions, or Redux implementation is present.
+- Add the actual React components, Redux store, API calls, and backend implementation to meet the requirements.
+- Implement authentication using JWT, bcrypt for password hashing, PostgreSQL for database interactions, and Redux Toolkit for state management as specified in the chapter.
+- Implement CRUD operations for stories and contributors as described in the chapter.
+- Implement the deployment process to Render for both frontend and backend.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/package-lock.json
+suggestions for improvement:
+- The provided code is a `package.json` file for a frontend application. It lists dependencies, but doesn't contain any implementation details relevant to the project requirements outlined in the Chapter Content/Questions.  It includes Redux Toolkit, which is mentioned in the chapter, but doesn't show how it's used to implement authentication, CRUD operations, or other features.
+- The `package.json` includes many optional dependencies. These should be reviewed and unnecessary ones removed to streamline the project.
+- Add scripts to `package.json` for building and starting the frontend application (e.g., `npm run build` and `npm run dev`).
+- The security score is low because there's no code demonstrating secure password storage (bcrypt) or JWT handling (including refresh tokens and secure cookie settings as specified in the instructions).
+- There's no code to demonstrate the implementation of the API calls, backend interaction, or the design of the frontend pages (Homepage, Story Viewer, Login, Signup).
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file for the frontend. It lacks the backend code, database schema implementation, authentication logic, CRUD operations, and responsive design aspects crucial to fulfilling the project requirements.
+- The `package.json` includes frontend dependencies (React, Redux Toolkit, etc.), aligning with the chapter's specifications for frontend technology.  However,  it does not encompass the backend dependencies (Express, pg, bcrypt, jsonwebtoken) mentioned in the chapter.
+- Add backend dependencies and project structure (backend and frontend directories, types directory) as described in the instructions. Implement missing features (authentication, authorization, CRUD operations, database design).
+- The `package.json` shows the use of `react-hook-form` and `zod`, which suggests that the frontend might use validation and form handling, which is good practice. But it's incomplete without the server-side counterparts.
+- Implement thorough input validation on both the frontend and backend to prevent vulnerabilities like SQL injection.
+- Implement secure token storage as described in the instructions; avoid storing access tokens in local storage.  Use HTTPOnly cookies for refresh tokens and in-memory storage for access tokens in the Redux store.
+- Include error handling and graceful degradation to prevent app crashes and provide meaningful feedback to users.
+- Add deployment scripts for Render.com to align with instructions.
+- The lack of actual code makes it impossible to assess detailed aspects of performance and security, such as database connection pooling, efficient query construction and secure coding practices.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/app/AppRouter.tsx
+suggestions for improvement:
+- The `Protected` component's security relies solely on the `accessToken` in Redux.  This is insufficient.  Implement refresh token handling as described in the instructions to handle token expiration and seamlessly refresh access tokens.  Currently, a simple token expiration will lead to a redirect to the login page without an attempt to refresh.
+- Add error handling within the `Protected` component.  Currently, if `useSelector` throws an error, the application might crash.  Use a `try...catch` block or similar.
+- The routing is good, but expand it to include routes for all the CRUD operations described (POST /stories, PATCH /stories/:id, DELETE /stories/:id etc.).
+- Consider adding loading indicators to pages that fetch data to improve user experience.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/app/store.ts
+suggestions for improvement:
+- The provided code snippet only shows Redux store configuration.  It doesn't implement any of the backend (Node.js, Express, PostgreSQL, bcrypt, JWT), frontend (React, TypeScript), or deployment aspects detailed in the chapter.  Crucially, it lacks authentication, authorization, CRUD operations, and the collaborative storytelling app functionality.
+- While the Redux setup is generally readable and uses Redux Toolkit effectively, error handling and more robust state management are missing.  For example, there's no handling for API request failures.
+- The `devTools` setting is good for development, but it should be configurable or removed in production builds to avoid exposing debugging information.
+- The security score is lowered because, while the code itself doesn't contain vulnerabilities, it's only a small part of a larger application that requires extensive security considerations (e.g., proper input sanitization, robust JWT handling, protection against SQL injection in the missing backend code, secure cookie handling, etc.).
+- Add more comprehensive error handling within the reducers to manage API call failures and other potential errors.  Consider using `createAsyncThunk` for asynchronous actions to handle loading, success, and error states effectively.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/app/toolkitApi.ts
+suggestions for improvement:
+- The `baseQueryWithReauth` function should handle potential errors during the refresh token request more robustly.  Currently, it only checks for `refresh.data` which might not cover all error scenarios. Consider adding more specific error handling, logging, and user feedback mechanisms.
+- The security score is lowered due to the potential vulnerability if the refresh token request fails unexpectedly.  A more sophisticated retry mechanism with exponential backoff and limits would enhance security and user experience.
+- Add input validation to the refresh endpoint request to prevent potential vulnerabilities. 
+- The code lacks explicit handling for the case where `(api.getState() as RootState).auth.user` is null or undefined which could lead to unexpected behavior.  Add a null check or use optional chaining.
+- Consider adding logging to better debug potential issues during refresh attempts. This would greatly aid in troubleshooting during development and production.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/counter.ts
+suggestions for improvement:
+- The provided code is a simple counter implementation using JavaScript and DOM manipulation. It does not address any of the requirements outlined in the Chapter Content/Questions, which focuses on building a full-stack collaborative storytelling application using Node.js, Express, Redux Toolkit, JWT, PostgreSQL, and React with TypeScript.  The code is entirely unrelated to the chapter's objectives.
+- The function `setupCounter` is reasonably readable. The use of type annotations enhances readability.
+- The performance of this simple counter function is excellent. The DOM manipulation is minimal and efficient.
+- The code doesn't handle any user input or interact with databases or servers, therefore, security is not a concern in this specific snippet.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/features/auth/LoginPage.tsx
+suggestions for improvement:
+- The code lacks explicit handling of refresh tokens and token expiration.  It should incorporate the refresh token mechanism described in the instructions for a seamless user experience.
+- Error handling could be more granular.  Instead of a generic "Failed to login", provide more specific error messages based on the type of error received from the backend (e.g., invalid credentials, server error).
+- The code uses FormData, which is generally good practice, but it should explicitly check for empty email and password fields before making the API call to prevent unnecessary server requests and improve user experience.
+- The security score is lowered because while it uses a mutation hook (`useLoginMutation`),  it doesn't explicitly show the secure storage of the tokens on the client-side (in-memory Redux store as instructed, not localStorage).  The instructions explicitly state to avoid storing tokens in `localStorage`.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/features/auth/SignupPage.tsx
+suggestions for improvement:
+- The code lacks input validation on the client-side.  Before sending data to the backend, validate that username, email, and password meet certain criteria (e.g., minimum length, email format).
+- Error handling could be improved.  Instead of a generic 'Failed to register', provide more specific error messages based on the backend response.  This will improve the user experience.
+- The `setCredentials` action should handle potential errors from the backend.  If the auto-login fails, the user should be notified.
+- Consider adding a loading indicator that's visually distinct from the 'Sign Up' button's disabled state. This will give a better user experience.
+- The security score is lowered because while the backend handles password hashing (as specified in the instructions),  the frontend doesn't explicitly handle sensitive data like passwords in a particularly secure way; best practices would involve avoiding storing sensitive info directly in the frontend at all, and this implementation isn't explicit in avoiding that.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/features/auth/authApi.ts
+suggestions for improvement:
+- The provided code only implements the registration and login endpoints, neglecting other crucial aspects of authentication like token refresh and authorization.  It doesn't address password hashing (bcrypt) directly, only showing its conceptual use in the instructions.  Error handling is missing; the code lacks mechanisms to catch and handle potential network errors or backend errors.
+- Add comprehensive error handling to the `register` and `login` mutations.  Handle cases where the server returns error status codes (e.g., 400, 401, 500) and provide informative error messages to the user.
+- The code lacks explicit implementation of JWT handling (generation, verification).  While it defines the shape of the response to include `accessToken`, it doesn't show the actual JWT creation or verification logic.
+- Implement token refresh functionality using a refresh token stored in an HTTP-only cookie.  This crucial step for seamless user experience is missing.
+- The code should explicitly handle password hashing using `bcrypt` within the mutation before sending data to the server. Currently, it assumes the backend handles this.
+- Include more robust input validation on the client-side to prevent common vulnerabilities. Sanitize user inputs before sending to the backend.
+- Add detailed comments explaining the purpose and functionality of each part of the code.  Specify how to use the hooks and provide examples.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/features/auth/authSlice.ts
+suggestions for improvement:
+- The code lacks handling for refresh tokens.  The chapter explicitly mentions the need for refresh tokens stored in HTTP-only cookies to handle token expiration and seamlessly refresh access tokens.  This is a critical security and user experience aspect.
+- Error handling is missing. The `setCredentials` and other actions should include error handling for potential failures during API calls (e.g., network errors, server-side errors).
+- The `accessToken` is stored directly in the Redux store, violating the security recommendation against storing tokens in `localStorage`. While this code uses a Redux store instead, the principle remains: sensitive data like access tokens should not be stored in client-side state that's easily accessible.
+- Consider adding a loading state to the reducer to improve user experience during authentication processes.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/features/stories/storiesApi.ts
+suggestions for improvement:
+- The code lacks authentication handling.  All endpoints (`getStories`, `createStory`, `updateStory`, `deleteStory`) require authentication middleware as specified in the instructions.  The JWT should be checked to ensure only authorized users can access these resources.
+- Error handling is missing. The code should include robust error handling to gracefully manage failures and prevent crashes.  Helpful error messages should be returned to the client without revealing sensitive information.
+- Input validation is absent. The code needs to validate user inputs (`title`, `content`, `id`) on both the frontend (in the hooks) and backend (in the controllers) to prevent vulnerabilities like SQL injection.  Check for empty fields, data type mismatches, and potential malicious input.
+- The `deleteStory` mutation returns only a message.  It should ideally return the deleted story or at least a more informative response (e.g., success status and potentially the ID of the deleted story).
+- The use of `api.injectEndpoints` suggests a good approach for handling API interactions using RTK Query; however, it's crucial to integrate authentication and authorization middleware correctly within the backend to securely protect these endpoints.
+- Add comprehensive testing to verify the functionality and robustness of these endpoints.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/features/stories/storiesSlice.ts
+suggestions for improvement:
+- Add error handling for API calls within the Redux slice.  The current implementation only updates the state; it doesn't handle potential network errors or other issues that could arise during fetching or updating stories.
+- Implement asynchronous actions using `createAsyncThunk` to handle API calls for fetching and updating stories. This will improve the structure and readability of the code and provide better control over the loading state.
+- Consider adding optimistic updates. For improved user experience, optimistically update the Redux store when a user performs an action (like creating or updating a story) before receiving confirmation from the server. If the server request fails, revert the optimistic update.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/main.ts
+suggestions for improvement:
+- The provided code is a basic Vite + TypeScript starter template. It does not implement any of the features described in the chapter content, such as authentication, database interactions, or the collaborative storytelling app.
+- The code should be replaced with a full-stack application incorporating Node.js, Express, Redux Toolkit, JWT, PostgreSQL, React, and TypeScript, as specified in the chapter.
+- Implement the backend with the specified routes, controllers, models, and database schema.
+- Implement the frontend with the specified pages, Redux slices, and state management.
+- Implement authentication, authorization, and CRUD operations as detailed in the instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/main.tsx
+suggestions for improvement:
+- The provided code is only the entry point of a React application using Redux. It does not implement any of the backend features (Node.js, Express, PostgreSQL, JWT, bcrypt), frontend features beyond basic Redux setup, or deployment aspects detailed in the chapter content.
+- The code lacks crucial components like authentication, CRUD operations, and database interactions described in the 'Mandatory Features' section.
+- The `AppRouter` and the Redux store (`./app/store`) are not defined, making it impossible to assess their completeness and adherence to the requirements.
+- Add error handling and input validation for robust application behavior.
+- Implement the refresh token mechanism for seamless user experience after page reloads.
+- Implement the necessary authorization middleware to protect routes based on user roles and permissions.
+- Include comprehensive security measures to prevent SQL injection and other vulnerabilities.
+- Add detailed documentation explaining how to set up the backend, frontend, and database, including environment variables and deployment steps.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/pages/HomePage.tsx
+suggestions for improvement:
+- Add error handling for the case where `useGetStoriesQuery` returns an error.  The current implementation only handles loading.
+- Implement filtering for the user's own stories as specified in the instructions.
+- Consider adding pagination if the number of stories is large to improve performance.
+- Add styling to improve the visual appeal and make it consistent with the rest of the application (e.g., using daisyUI as suggested).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/pages/StoryPage.tsx
+suggestions for improvement:
+- The code lacks error handling for the `useGetStoriesQuery` hook.  It should handle loading and error states explicitly.
+- Add loading and error states to improve user experience.  Show a loading indicator while fetching data and an error message if the fetch fails.
+- The `useGetStoriesQuery` likely fetches all stories. This is inefficient.  The API should have a dedicated endpoint to fetch a single story by ID for better performance.  The frontend should call this endpoint.
+- Consider adding pagination if the number of stories could become very large.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/style.css
+suggestions for improvement:
+- The provided CSS code is a basic stylesheet and does not implement any of the functionality described in the Chapter Content/Questions.  It provides styling for a webpage but doesn't address backend development (Node.js, Express, PostgreSQL), authentication (JWT, bcrypt), frontend development (React, Redux Toolkit, TypeScript), or deployment.
+- The CSS is well-structured and readable, but it's irrelevant to the core project requirements.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/src/vite-env.d.ts
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/tailwind.config.cjs
+suggestions for improvement:
+- This code snippet is a Tailwind CSS configuration file for DaisyUI. It does not implement any of the backend or frontend logic required for the collaborative storytelling app.
+- The chapter requires a full-stack application with authentication, database interactions, and CRUD operations. This code only sets up styling.
+- Add the actual implementation for authentication, database interactions (PostgreSQL), API endpoints (using Express), React frontend, Redux Toolkit state management, and deployment to Render.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/frontend/tsconfig.json
+suggestions for improvement:
+- This code is a TypeScript configuration file, not an implementation of the collaborative storytelling app.  It doesn't contain any backend or frontend code related to authentication, CRUD operations, or deployment as specified in the chapter content.
+- The TypeScript configuration is generally well-structured and uses many good practices, such as strict type checking and preventing unused variables.
+- Add implementation code for the backend and frontend, including authentication, database interactions, and CRUD operations as described in the chapter.
+- Implement features for user registration, login, story creation, editing, and deletion.  Add functions for handling JWTs and refresh tokens.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/types/story.ts
+suggestions for improvement:
+- Consider adding optional fields to the `User` interface for a more complete representation if needed by the application.  For example, a `createdAt` or `updatedAt` field might be useful.
+- The `created_at` and `updated_at` fields are currently strings.  For better type safety and potential date manipulation, consider using `Date` objects instead.  This would require adjusting how these fields are handled in the backend and frontend, potentially using libraries like `moment.js` or built-in date formatting methods.
+- Add JSDocs to clearly explain the purpose of the interface and its fields. This will significantly improve readability and maintainability.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_10/Day_5/types/user.ts
+suggestions for improvement:
+- The provided code only defines a User interface.  It does not implement any of the backend (Node.js, Express, PostgreSQL, bcrypt, JWT), frontend (React, Redux Toolkit), or deployment (Render) aspects described in the chapter.  It lacks the crucial functionality for authentication, CRUD operations, database interactions, and state management.
+- Implement the backend API endpoints as described in the chapter, including authentication using JWT, password hashing with bcrypt, and database interactions with PostgreSQL.
+- Create the React frontend using Redux Toolkit for state management.  This includes components for user registration, login, story creation, viewing, and collaboration.
+- Implement the deployment process to Render for both the frontend and backend.
+Correctness: 20%
+-----
