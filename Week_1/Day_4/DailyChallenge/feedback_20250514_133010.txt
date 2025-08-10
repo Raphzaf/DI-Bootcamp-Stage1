@@ -1,0 +1,12 @@
+URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_1/Day_4/DailyChallenge/main.py
+suggestions for improvement:
+- The code correctly extracts alphabetic characters column-wise. However, it misses the crucial step of replacing non-alphabetic characters between alphabetic characters with spaces, as specified in Step 4 of the instructions.
+- The variable names could be more descriptive (e.g., `num_cols` to `num_columns`).
+- Consider adding error handling for cases where the input string is not properly formatted (e.g., inconsistent row lengths).
+- The code could be made more readable by extracting the column-wise iteration into a separate function.
+Brief justification:
+- correctness: The code successfully transforms the matrix string into a 2D list and iterates through columns to extract alphabetic characters (Steps 1, 2, and 3). However, it fails to implement Step 4, which requires replacing sequences of non-alphabetic characters between alphabetic characters with spaces.  The final decoded message is therefore incomplete according to the chapter's requirements.
+- readability: The code is relatively easy to follow. The use of list comprehension for creating the 2D list is efficient and readable.  However, more descriptive variable names would enhance readability further.
+- performance: The code's performance is efficient for the given task. The nested loops have a time complexity of O(m*n), where m is the number of rows and n is the number of columns, which is reasonable for this problem size.  Optimizations are not necessary for this small-scale problem.
+- security: There are no security concerns in this code as it only involves string manipulation and does not interact with external systems or handle user input that could lead to vulnerabilities.
+

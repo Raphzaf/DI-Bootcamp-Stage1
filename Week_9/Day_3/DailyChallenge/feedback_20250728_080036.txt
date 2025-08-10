@@ -1,0 +1,81 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/package.json
+suggestions for improvement:
+- This JSON file is a `package.json` file, which is used for Node.js projects.  It does not contain any code related to a React-Redux daily planner application.  The chapter instructions explicitly require the implementation of a React-Redux application.
+- To receive a non-zero correctness score, provide the actual React and Redux code implementing the daily planner application as specified in the chapter content.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/public/index.html
+suggestions for improvement:
+- This code only provides an HTML file, which is a basic structure for a React application.  It doesn't contain any React, Redux, or any of the components, actions, reducers, or logic described in the chapter content.
+- The chapter requires a complete React-Redux application with specific components (Calendar, TaskList, AddTask, EditTask, DeleteTask), actions (addTask, editTask, deleteTask), and reducers for managing daily tasks.  This HTML file provides none of that functionality.
+- Implement the Redux store, actions, reducers, and React components as detailed in the chapter's steps.
+- Add a date picker or calendar component.
+- Create components to handle task display, addition, editing, and deletion.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/src/App.js
+suggestions for improvement:
+- The code only sets up the basic UI components (DatePicker, TaskForm, TaskList) without implementing any Redux store, actions, or reducers as specified in Step 1 and Step 2.
+- It lacks the crucial Redux integration for managing tasks across different days.  `useSelector` and `useDispatch` are not used.
+- The components are not connected to the Redux store. Therefore, adding, editing, or deleting tasks won't affect the state.
+- The application doesn't handle the selection of different days and updating the task list accordingly (Step 6).
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/src/app/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store.  It's missing the crucial parts: actions, reducers, components (Calendar, TaskList, AddTask, EditTask, DeleteTask), and the interaction between them as described in the chapter content.
+- The `plannerReducer` and its associated actions are not defined.  The chapter explicitly requires defining actions (`addTask`, `editTask`, `deleteTask`) and reducers to handle them.
+- No components are implemented.  The chapter details the requirements for several components (Calendar, TaskList, AddTask, EditTask, DeleteTask) to handle user interaction and data display.
+- There's no connection between the components and the Redux store using `useSelector` and `useDispatch`.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/src/features/planner/DatePicker.js
+suggestions for improvement:
+- The provided code only implements a date picker component (Step 3).  It's missing the core functionality of task management: adding, editing, deleting, and displaying tasks (Steps 1, 2, 4, 5, 6).
+- The code doesn't interact with a Redux store that manages tasks for different days as required by the Chapter Content/Questions.
+- The `plannerSlice` is not provided, making it impossible to assess its correctness.
+Correctness: 50%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/src/features/planner/TaskForm.js
+suggestions for improvement:
+- The code only implements `addTask` and `editTask`.  It's missing the `deleteTask` functionality required by the chapter.
+- The code lacks a calendar/date picker component (Step 3).
+- There's no `TaskList` component to display tasks (Step 4).
+- Error handling is minimal; there's no feedback to the user if a task fails to add or update.
+- The `task.id` is assumed to exist for `editTask`;  a better approach would be to include the ID in the task object from the reducer.
+- Add input validation (e.g., character limits, data type checks) for better user experience and data integrity.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/src/features/planner/TaskList.js
+suggestions for improvement:
+- The code is missing the implementation of `addTask` and `editTask` actions and reducers in the `plannerSlice`.  These are crucial for fulfilling the requirements of adding and editing tasks.
+- The Calendar/Date Picker component is not implemented.  The `selectedDate` is assumed to be provided by a parent component or another part of the application (not shown).
+- Error handling (e.g., for cases where `tasksByDate[selectedDate]` is undefined or if `taskId` is not found) should be added for robustness.
+- Add input validation to the `TaskForm` (not shown) to prevent issues caused by invalid input.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/src/features/planner/plannerSlice.js
+suggestions for improvement:
+- Add input validation to prevent issues with malformed dates or task data.
+- Consider using a more robust unique ID generation method instead of `idCounter` for larger applications.  UUIDs are a good alternative.
+- The `editTask` reducer could be improved by handling the case where the date or task ID is not found more gracefully, perhaps logging a warning or throwing an error for debugging purposes.
+- Implement error handling for missing data in the reducers (e.g., checking for `null` or `undefined` before accessing properties).
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/src/index.css
+suggestions for improvement:
+- The provided code is only CSS styling.  It does not implement any of the React, Redux, or daily planner functionality described in the Chapter Content/Questions.  It needs to include React components, Redux store setup (using configureStore, reducers, actions), and component interactions to manage tasks.
+- Add React components for calendar/date picker, task list, adding, editing, and deleting tasks.
+- Implement Redux actions (addTask, editTask, deleteTask) and reducers to manage the task data within the Redux store.
+- Use useSelector and useDispatch hooks to connect the React components to the Redux store.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/DailyChallenge/src/index.js
+suggestions for improvement:
+- The provided code only sets up the React application with Redux. It doesn't contain any of the components or Redux logic (actions, reducers) specified in the chapter content.  The chapter requires a daily planner with features for adding, editing, deleting, and displaying tasks for specific days.  This code only provides the foundational structure.
+- Implement the `store`, reducers, actions, and components (Calendar, TaskList, AddTask, EditTask, DeleteTask) as described in the chapter's steps.
+- Add a date picker component to allow users to select a date.
+- Implement functionality to handle adding, editing, and deleting tasks in the reducers and dispatch appropriate actions in the components.
+- Use `useSelector` and `useDispatch` hooks to connect the components to the Redux store.
+Correctness: 0%
+-----

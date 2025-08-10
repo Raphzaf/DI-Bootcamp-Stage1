@@ -1,0 +1,72 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/package.json
+suggestions for improvement:
+- This is a `package.json` file, not a React/Redux application.  It provides no implementation of the todo list application described in the chapter content.
+- The chapter requires a React-Redux application with specific components (TodoList, AddTodo, TodoItem) and Redux Toolkit slices for managing todo items. This file provides none of that.
+- Create the React components and Redux logic as described in the chapter to address the exercise.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/public/index.html
+suggestions for improvement:
+- This HTML file only provides a basic structure for a React application.  It doesn't contain any of the React, Redux Toolkit, or application logic described in the Chapter Content/Questions.  The exercise requires creating React components (TodoList, AddTodo, TodoItem), Redux slices, reducers, and connecting them to manage a todo list. This HTML file is only the starting point for such an application, but does not implement any of the core functionality described.
+- Add React components, Redux store setup, reducers, and actions to fulfill the requirements of Exercise 1.
+- Implement the `createSlice`, `configureStore`, `useSelector`, and `useDispatch` hooks from Redux Toolkit as described in the instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/src/App.js
+suggestions for improvement:
+- The code is missing the Redux store setup and the implementation of the Redux Toolkit slice as described in Step 1 and Step 2 of the chapter content.  The `AddTodo` and `TodoList` components are likely incomplete without the proper Redux integration.
+- Add missing Redux store setup using `configureStore` and the todo slice created with `createSlice`.  This is crucial for the application to function as a React-Redux application.
+- Implement the `addTodo`, `toggleTodo`, and `removeTodo` reducers within the todo slice.  These are essential for managing the todo list state.
+- Ensure `useSelector` and `useDispatch` hooks are used within `AddTodo` and `TodoList` components to connect them to the Redux store. This will allow the components to interact with the store's state and dispatch actions.
+- The `TodoItem` component is missing entirely.  This component is necessary to display and manage individual todo items (toggling completion and removing them).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/src/app/store.js
+suggestions for improvement:
+- The provided code only implements Step 2 (Implement Redux Store) of Exercise 1.  It's missing the crucial steps of creating the Redux Toolkit slice (Step 1), creating the React components (Step 3), and connecting them to the store (Step 4).  The testing (Step 5) is also absent.
+- The `todosReducer` is not defined within this code snippet.  The code assumes its existence and correct implementation in a separate file ('../features/todos/todosSlice').  Including a minimal example of `todosSlice` would significantly improve the completeness and allow for better assessment.
+- Add comprehensive error handling and input validation to the `todosSlice` to make it more robust. Consider adding types with TypeScript for better code maintainability and readability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/src/features/todos/AddTodo.js
+suggestions for improvement:
+- The code only implements the `AddTodo` component.  The instructions require `TodoList` and `TodoItem` components as well, along with the Redux store setup and slice definition (todosSlice).
+- Error handling for adding empty todos is good, preventing potential issues.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/src/features/todos/TodoItem.js
+suggestions for improvement:
+- Add a key prop to the <li> element for better React performance and to avoid warnings.  The key should be unique for each todo item (e.g., todo.id).
+- Consider using more semantic HTML elements if appropriate for accessibility, like <input type="checkbox"> instead of a <span> for toggling completion.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/src/features/todos/TodoList.js
+suggestions for improvement:
+- The `TodoList` component is correctly implemented, fetching todos from the Redux store using `useSelector` and rendering them using `TodoItem` components. However, it lacks error handling if `todos` is undefined or null, which should be addressed.
+- The `key` prop in the `map` function should ideally be a unique identifier of the todo item.  While the example shows `todo.id`, ensure this id is properly generated and guaranteed to be unique.
+- The code doesn't handle potential issues if the `todos` array is empty.  An empty message or loading indicator should be displayed to improve user experience.
+- The `TodoItem` component is not provided, preventing a complete assessment of correctness for todo manipulation.  It needs to be included to give a full correctness score.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/src/features/todos/todosSlice.js
+suggestions for improvement:
+- The `nextId` variable should be part of the Redux state to persist across sessions.  Currently, it's reset each time the application loads. Consider moving it into the initial state as `{ nextId: 1, todos: [] }`.
+- The `toggleTodo` reducer could be improved for clarity by using `findIndex` instead of `find` and then updating the state using that index. This avoids the potential for implicit mutations.
+- Add some error handling. For instance, `toggleTodo` and `removeTodo` should handle cases where the todo with the given ID is not found.  Currently, they silently do nothing if the ID is invalid.
+- Consider adding a `clearCompleted` action for completeness.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/src/index.css
+suggestions for improvement:
+- The provided code is only CSS styling. It does not implement any of the functionality described in the chapter content (creating a todo list app with React, Redux Toolkit, and Redux).
+- The chapter requires the implementation of React components (TodoList, AddTodo, TodoItem), Redux Toolkit slices, and Redux store configuration.  None of these are present.
+- Add the actual React and Redux code to fulfill the exercise requirements.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_3/ExerciseXP/src/index.js
+suggestions for improvement:
+- The provided code is a basic React-Redux setup. It doesn't implement any of the Todo List functionality described in Exercise 1.  It only renders an App component wrapped in a Provider to make the Redux store available.
+- The code needs to implement the Todo slice, reducers (addTodo, toggleTodo, removeTodo), the TodoList, AddTodo, and TodoItem components, and connect them to the Redux store using useSelector and useDispatch as specified in Exercise 1.
+- The `./app/store` and `./App` files are missing, so it's impossible to assess the correctness of the complete application without seeing their content.
+Correctness: 0%
+-----

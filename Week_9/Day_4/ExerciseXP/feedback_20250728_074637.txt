@@ -1,0 +1,63 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/ExerciseXP/package.json
+suggestions for improvement:
+- This is a `package.json` file, not the actual React-Redux code implementing the exercise.  The provided JSON only describes project dependencies and scripts; it doesn't contain the Redux store setup, reducers, actions, components, or any logic to fetch and display user data.
+- The exercise requires implementing Redux slices, Thunk action creators, React components using `useSelector` and `useDispatch`, and handling API requests (likely using `axios`). None of this is present in the given `package.json` file.
+- To receive a higher correctness score, please provide the actual React-Redux code that fulfills the exercise requirements as described in the chapter content.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/ExerciseXP/public/index.html
+suggestions for improvement:
+- This HTML file only provides a basic structure for a React application.  It does not contain any of the React, Redux, or Redux Thunk code required to fulfill the exercise's requirements.
+- Add React components, Redux store configuration, actions, reducers, and the logic to fetch and display user data using `useSelector` and `useDispatch`.
+- Implement the Thunk action creator to handle the asynchronous API call.
+- Include error handling within the Thunk and reducers.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/ExerciseXP/src/App.js
+suggestions for improvement:
+- The provided code only shows a basic App component that renders a UserData component.  It lacks the crucial Redux store setup, Redux slice for user data, Thunk action creator, and implementation of useSelector and useDispatch hooks, all explicitly detailed in the chapter instructions.
+- The `UserData` component is not defined within this code snippet; it's presumed to exist in `./features/user/UserData.js`. The actual implementation of fetching, handling, and displaying user data is missing.
+- Add the Redux store setup with configureStore and thunk middleware.
+- Implement the Redux slice using createSlice to manage user data, including reducers for fetching success and failure.
+- Create a Thunk action creator to fetch data from an API.
+- In the UserData component, use useSelector to access the data from the store and useDispatch to trigger the Thunk action.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/ExerciseXP/src/app/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store.  It's missing crucial parts like the `userSlice`, the thunk action creator for fetching data, the `UserData` component, and the API call itself.  These are all explicitly required by the exercise instructions.
+- Add error handling to the thunk to manage potential API fetch failures. The instructions explicitly mention this.
+- Include comments explaining the purpose of each part of the code for better readability.
+- Consider using a mock API for testing purposes until a real API is integrated. This makes testing easier and is aligned with the instructions to test error handling and functionality.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/ExerciseXP/src/features/user/UserData.js
+suggestions for improvement:
+- The `userSlice` is missing from the provided code.  The chapter explicitly requests the creation of a Redux slice using `createSlice` to manage user data.  Including this slice is crucial for a complete solution.
+- The code assumes a specific structure for the fetched user data (`data.name`, `data.email`, `data.phone`).  Adding input validation or handling potential missing fields would improve robustness.
+- Add error handling for the case where the API response is not in the expected format or contains unexpected data types
+- Consider using a loading indicator that is more visually appealing than a simple `<p>Loading...</p>`
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/ExerciseXP/src/features/user/userSlice.js
+suggestions for improvement:
+- Add error handling for network issues in the fetchUser thunk.  The current error handling only catches errors from the API response, not network errors (like a timeout).
+- Consider adding types to the reducer actions for better type safety and maintainability.
+- The `fetchUser` thunk could be improved by using a more descriptive action type name (like `FETCH_USER_REQUEST`, `FETCH_USER_SUCCESS`, `FETCH_USER_FAILURE`) for better readability and debugging.
+- Implement a React component to consume the user data and display it, thus completing the exercise's requirements.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/ExerciseXP/src/index.css
+suggestions for improvement:
+- The provided code is only CSS styling.  It does not implement any of the functionality described in the Chapter Content/Questions, which focuses on building a React-Redux application that fetches and displays user data using Redux Thunk.
+- The exercise requires creating React components, Redux slices, Thunk actions, and connecting them to display data from an API.  This CSS does not address any of these requirements.
+- To receive a higher correctness score, provide the actual React, Redux, and Redux Thunk code that fulfills the exercise steps.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_4/ExerciseXP/src/index.js
+suggestions for improvement:
+- This code only sets up a basic React-Redux application. It doesn't implement any of the steps outlined in the exercise (fetching data, Redux Thunk, createSlice, etc.).
+- The exercise requires creating a Redux slice, Thunk action creator, component to display user data, and handling API calls.  This code provides none of that functionality.
+- Add the missing components, reducers, and actions to fulfill the exercise requirements.
+Correctness: 0%
+-----

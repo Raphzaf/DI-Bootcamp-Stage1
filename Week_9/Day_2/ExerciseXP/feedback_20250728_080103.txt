@@ -1,0 +1,62 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_2/ExerciseXP/package.json
+suggestions for improvement:
+- This is a `package.json` file, not a React/Redux application.  It provides no implementation of the todo list.
+- The chapter instructions clearly outline building a React/Redux todo list. This file only sets up a project structure.
+- Implement the Redux store, actions, reducers, and React components as described in the chapter.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_2/ExerciseXP/public/index.html
+suggestions for improvement:
+- This HTML file only sets up the basic structure for a React application.  It doesn't contain any of the React, Redux, or JavaScript code necessary to implement the todo list functionality described in the chapter.
+- Add React components, Redux store, actions, and reducers to implement the todo list functionality.  The provided HTML is just the starting point for a React application.
+- Implement adding, toggling, and removing todos as described in the instructions.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_2/ExerciseXP/src/App.js
+suggestions for improvement:
+- The provided code only renders a `TodoList` component.  It does not define the Redux store, actions, reducers, or the connection between the React components and the Redux store, all of which are explicitly required in the chapter content.
+- The `TodoList` component (which is not included) needs to be implemented to handle adding, toggling, and removing todos using Redux.
+- Implement Redux actions (ADD_TODO, TOGGLE_TODO, REMOVE_TODO), reducers to handle these actions, and connect the `TodoList` component to the Redux store using `react-redux`'s `connect` function.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_2/ExerciseXP/src/app/store.js
+suggestions for improvement:
+- The provided code only sets up the Redux store and doesn't include any actions, reducers, or React components, which are explicitly required in the chapter instructions.
+- The `todosReducer` is imported but its definition is missing.  The chapter requires defining reducers to handle adding, toggling, and removing todos.
+- No React components are provided to interact with the store.  The instructions clearly state that components for adding, displaying, and managing todos are necessary.
+- Add action creators and reducers to handle adding, toggling completion, and removing todos.
+- Create React components to display the todo list, add new todos, and handle completion/removal.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_2/ExerciseXP/src/features/todos/TodoList.js
+suggestions for improvement:
+- The code lacks error handling.  For instance, what happens if `todosSlice` doesn't exist or the action creators are incorrectly defined? Add error handling and logging.
+- Consider adding a unique ID generation strategy to the `addTodo` action creator to avoid potential issues with duplicate IDs if you ever expand functionality.
+- Improve styling;  the current styling is minimal.  Consider using a CSS framework or more robust inline styles for better presentation.
+- Add input validation to prevent users from adding overly long or otherwise problematic todo items.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_2/ExerciseXP/src/features/todos/todosSlice.js
+suggestions for improvement:
+- Use Immer to avoid directly mutating the state.  Redux Toolkit's createSlice already provides this functionality but the `toggleTodo` reducer is directly modifying the state object. This can lead to unexpected behavior in larger applications.  `removeTodo` is fine as it uses the `return` to provide a new state object.
+- Add error handling.  The `toggleTodo` reducer doesn't handle the case where a todo with the given ID is not found.  A more robust implementation would either log an error or handle the case gracefully.
+- Consider adding a 'clear completed' action to remove all completed todos.
+- Improve testing: While the code works, adding unit tests to verify the functionality of each reducer would improve confidence in the code's correctness.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_2/ExerciseXP/src/index.css
+suggestions for improvement:
+- The provided code is only CSS styling. It does not implement any of the React, Redux, or todo list functionality described in the chapter content.
+- The chapter requires a fully functional todo list application using React and Redux.  This code only styles a generic input and button, offering no functionality related to a todo list.
+- Implement the React and Redux components as described in the instructions to build the todo list application. This includes actions, reducers, and connecting components to the Redux store.
+- Add JavaScript code to handle adding, toggling, and removing todos. The provided CSS alone is insufficient.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_9/Day_2/ExerciseXP/src/index.js
+suggestions for improvement:
+- The provided code only sets up the React application with Redux. It lacks the actual implementation of the todo list components, actions, and reducers as described in the chapter content.  The chapter explicitly states to create components for adding, completing, and removing todos, define action types and creators, and implement reducers to manage the todo state.  This code only renders a <Provider> which is a necessary but insufficient part of the exercise.
+- Add components for adding, toggling, and removing todos.  These components should interact with the Redux store.
+- Implement actions (addTodo, toggleTodo, removeTodo) and corresponding reducers to update the Redux store.
+- Create the `App` component and its related components to handle the user interface and interactions with the Redux store.  Import this into the index.js.
+Correctness: 0%
+-----

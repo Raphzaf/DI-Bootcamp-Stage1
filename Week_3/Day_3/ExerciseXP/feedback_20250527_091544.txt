@@ -1,0 +1,71 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP/Exercise-1/index.html
+suggestions for improvement:
+- Exercise 1: Implement the bonus features (random font size on hover for h1 and fade-out effect on hover for the second paragraph).
+- Exercise 1: Add error handling for cases where elements might not be found (e.g., if the HTML structure changes).
+- Exercise 2:  Improve input validation beyond just checking for emptiness.  Consider data type validation (is it actually a name?) or length limits.
+- Exercise 3: The provided code is missing.  Add the JavaScript functions for `getBoldItems`, `highlight`, and `returnItemsToDefault` and the event listeners for mouseover and mouseout.
+- Exercise 4: The provided HTML is missing the JavaScript to calculate the volume of a sphere and update the form.
+- Exercise 5: This exercise is not included in the provided code. Add the relevant HTML and JavaScript.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP/Exercise-1/script.js
+suggestions for improvement:
+- The code for Exercise 1 is mostly correct, but it's missing the button element for making paragraphs bold.  The selector for the second paragraph in the bonus section is also missing. Add a button with the ID 'bold-btn' to the HTML and  an id of 'second-paragraph' to the second paragraph to make these parts function correctly.
+- Exercise 2 is missing, and needs to be implemented according to the instructions provided.
+- Exercise 3 is missing, and needs to be implemented according to the instructions provided.
+- Exercise 4 is missing, and needs to be implemented according to the instructions provided.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP/Exercise-1/styles.css
+suggestions for improvement:
+- Exercise 1:  The bonus features (random font size on hover and fade-out effect) are not implemented.  The code for adding the button to bold paragraphs is missing.
+- Exercise 2: The code for this exercise is missing.  The instructions are clear, but no implementation is provided for review.
+- Exercise 3: The code for this exercise is missing.  The global variable and functions are described, but no implementation to check is given.
+- Exercise 4: The code for this exercise is missing. The instructions are present, but there's no code to assess.
+- All exercises:  Include the complete code for all exercises within the response for a comprehensive evaluation.  Currently, only CSS snippets are provided, making a full assessment impossible.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP/Exercise-2/index.html
+suggestions for improvement:
+- Exercise 1 is missing entirely.
+- Exercise 2: The code is missing the JavaScript (`script.js`) to handle form submission and dynamically update the list.  The provided HTML structure is correct, but without the JavaScript, it's incomplete.
+- Exercise 3 is missing entirely.
+- Exercise 4 is missing entirely.
+- The code only addresses a part of the exercises.  It needs to include all the exercises, not just exercise 2.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP/Exercise-2/script.js
+suggestions for improvement:
+- The code for Exercises 1 and 3 is missing.  The provided code only addresses Exercise 2.
+- Error handling in Exercise 2 could be improved.  Instead of a simple alert, provide more user-friendly feedback (e.g., display an error message near the respective input field).
+- Exercise 2's efficiency could be enhanced by using `innerHTML` more effectively to avoid unnecessary DOM manipulation.  Instead of creating individual `li` elements, construct the entire `<ul>` string and assign it to `userAnswerList.innerHTML` in one go.
+- Add comments to explain the purpose of different code sections, especially within the event listeners.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP/Exercise-3/index.html
+suggestions for improvement:
+- The code is missing the implementation of `getBoldItems`, `highlight`, and `returnItemsToDefault` functions in `script.js`.  These are crucial for completing Exercise 3.
+- Add error handling for cases where the paragraph or strong elements might be missing from the DOM.
+- The code for Exercises 1, 2, and 4 is entirely missing. The provided HTML only addresses Exercise 3.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP/Exercise-3/script.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP/Exercise-4/index.html
+suggestions for improvement:
+- The provided code only addresses Exercise 4 (Volume of a sphere).  Exercises 1, 2, and 3 are missing.
+- Error handling is missing.  The code should gracefully handle non-numeric input for the radius.
+- The `readonly` attribute on the volume input is a good addition, but consider adding a clear message to the user if an invalid radius is entered.
+- Add comments to the JavaScript code (script.js) to explain the calculation steps and improve readability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_3/Day_3/ExerciseXP/Exercise-4/script.js
+suggestions for improvement:
+- The code could benefit from more descriptive variable names (e.g., `radiusInput` could be `radiusInputField`).
+- Adding input validation to handle non-numeric input would improve robustness.  The current `isNaN` check is good, but additional checks (e.g., checking for empty strings) might be useful.
+- Consider using a more descriptive message for the alert, for instance including the invalid input.
+Correctness: 100%
+-----

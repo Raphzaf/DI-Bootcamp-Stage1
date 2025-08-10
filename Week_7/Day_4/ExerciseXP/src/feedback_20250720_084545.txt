@@ -1,0 +1,44 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_4/ExerciseXP/src/App.js
+suggestions for improvement:
+- Exercise 1 correctly implements the instructions, displaying the paragraph, the JSX element, and the sum calculation.
+- Exercise 2 successfully renders the user's first and last names. The `UserFavoriteAnimals` component, while separately implemented, correctly handles the animal array.
+- Exercise 3's Part I and II effectively demonstrate the use of HTML tags and inline styles within a React component. Part III, using a separate CSS file, adds another styling method. However, the code lacks the requested `Exercise.css` file and styling.
+- Add missing `Exercise.css` file with the specified styles for the paragraph.
+- Consider using functional components with hooks instead of class components where appropriate, simplifying the code and improving readability.
+- Add error handling for potential issues (e.g., missing props).
+- Add more comprehensive testing. 
+- Improve comments to explain the logic of the code. This applies specifically to the `UserFavoriteAnimals.js` and `Exercise3.js` components to show how they satisfy the requirements.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_4/ExerciseXP/src/Exercise.css
+suggestions for improvement:
+- This code snippet is only a CSS style definition.  It's missing the React components and JavaScript code required to fulfill the exercises.  The exercises involve creating React components, using JSX, handling objects and arrays, and styling components using inline styles and external CSS files. This CSS alone does not address any of those requirements.
+- To receive a correctness score above 0, you need to provide the React code that implements the exercises described in the chapter content. This includes creating components, using JSX for rendering, and integrating the provided CSS style (`.para`) within a React component.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_4/ExerciseXP/src/Exercise3.js
+suggestions for improvement:
+- The code could be slightly improved by using more descriptive variable names (e.g., instead of `style_header`,  `headerStyle`).
+- Consider adding alt text to the image for accessibility.
+- While functional,  the inline styling for the h1 could be moved to the CSS file for better separation of concerns.  This would enhance maintainability and readability.
+- Add error handling for the image in case the URL is invalid. A fallback image could be displayed.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_4/ExerciseXP/src/UserFavoriteAnimals.js
+suggestions for improvement:
+- The code is well-structured and functional.  A minor improvement would be to use the animal itself as the key in the map function, instead of the index.  This is generally preferred for better performance and maintainability if the array of animals were ever to be dynamically reordered.  For example: `<li key={animal}>{animal}</li>` (assuming animal names are unique).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_4/ExerciseXP/src/index.css
+suggestions for improvement:
+- This code snippet is only a CSS style definition.  It's part of a larger React application, and without the React code that uses this CSS, it's impossible to assess correctness against the exercises.
+- To assess correctness, provide the full React application code, including `App.js`, `UserFavoriteAnimals.js`, and `Exercise.js`, demonstrating how this CSS is integrated and how the exercises are implemented.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_4/ExerciseXP/src/index.js
+suggestions for improvement:
+- The provided code is only the boilerplate for a React app. It doesn't contain any of the code necessary to complete the exercises outlined in the chapter content.  The exercises require creating components, using JSX, styling with inline styles and CSS files, and working with props.  This code only sets up the environment, but doesn't address any of the specific tasks.
+- Add the components and logic to fulfill exercises 1, 2, and 3 as described in the document.  This includes creating `App.js`, `UserFavoriteAnimals.js`, and `Exercise.js` components, and using JSX to render elements, styling with inline styles and external CSS files, and passing props between components.
+- Create the necessary files (e.g., `UserFavoriteAnimals.js`, `Exercise.js`, `Exercise.css`) and populate them with the appropriate React code to solve the exercises.
+Correctness: 0%
+-----

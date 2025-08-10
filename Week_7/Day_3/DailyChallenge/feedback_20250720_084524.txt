@@ -1,0 +1,53 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/app.js
+suggestions for improvement:
+- Improve error handling to provide more specific error messages and potentially log errors for debugging purposes.
+- Add input validation for email format in the register route.
+- Consider using a more robust database solution instead of JSON file storage for production environments.
+- Implement proper authentication and authorization mechanisms for `/users`, `/users/:id`, and `/users/:id` routes.  Currently, these routes are publicly accessible, which violates best practices for a user management API. 
+- Add a mechanism to handle password resets. The current implementation lacks this essential feature for user management.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/login.html
+suggestions for improvement:
+- The code only implements the login form and functionality.  It's missing the registration form, the backend Express.js server, the user data handling with JSON file storage, and bcrypt password hashing as specified in the Chapter Content/Questions.
+- Error handling on the frontend could be more robust.  Instead of just showing 'Login failed', it should provide more specific error messages based on the backend response (e.g., incorrect password, username not found).
+- The backend (Express.js) server and related functionalities (POST /register, GET /users, etc.) are entirely missing.
+- The security score is low because it directly sends passwords over HTTP without HTTPS.  This is a significant vulnerability.
+- The `users.json` file and its management are not included. 
+- The client-side code lacks input validation (e.g., checking for valid username/password formats).
+Correctness: 70%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/package-lock.json
+suggestions for improvement:
+- The provided code is a `package-lock.json` file, which describes the project's dependencies.  It does not contain any implementation of the user management API.  You need to provide the actual Express.js code for the API routes, HTML files for the login and registration forms, and the `users.json` file.
+- Add error handling for file I/O operations (using try-catch blocks).
+- Implement input validation to prevent vulnerabilities (e.g., SQL injection is not a concern here because you're using a JSON file, but input sanitization is still important).
+- Consider using environment variables to store sensitive information like the database path (or in this case, the path to the JSON file).
+- For production environments, JSON file storage is not recommended. Consider using a more robust database solution like MongoDB or PostgreSQL.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/package.json
+suggestions for improvement:
+- This JSON file only provides package information.  It does not contain any of the actual code (Express.js app, HTML forms, routing, bcrypt implementation, file I/O, etc.) required to fulfill the daily challenge.
+- Implement all the required server-side and client-side code to create the registration and login functionality as described in the chapter instructions.
+- Add error handling for file operations, input validation, and bcrypt hashing failures.
+- Create `users.json` file and initialize it as an empty array `[]`.
+- Implement the specified API endpoints using `express.Router`.
+- Use bcrypt to hash passwords and verify them during login.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/register.html
+suggestions for improvement:
+- The provided code only implements the front-end registration form.  It lacks the Express.js backend, user data storage (JSON file), bcrypt integration, and the other API routes (login, GET/PUT users) as specified in the chapter content.
+- Error handling on the frontend is basic.  More robust error handling should be implemented to provide more informative messages to the user.
+- The backend (Express.js API) is entirely missing. This is a critical part of the daily challenge.
+- No security measures beyond basic input validation are present.  The password is sent in plain text in the fetch request, which is a major security flaw.
+- Implement proper input validation on the server-side to prevent vulnerabilities such as SQL injection (although not applicable here, good practice) and other attacks.
+- The code uses in-memory variables for username and password which is incorrect.
+Correctness: 60%
+-----
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_7/Day_3/DailyChallenge/users.json
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----

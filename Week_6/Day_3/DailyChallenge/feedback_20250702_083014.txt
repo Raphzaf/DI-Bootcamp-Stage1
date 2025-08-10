@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Raphzaf/DI-Bootcamp-Stage1/blob/main/Week_6/Day_3/DailyChallenge/main.sql
+suggestions for improvement:
+- The query to count not logged in customers could be slightly improved for clarity.  Instead of `WHERE cp.isLoggedIn = FALSE OR cp.isLoggedIn IS NULL`, use `WHERE cp.isLoggedIn IS FALSE` which is more concise and directly checks for the absence of a true value.
+- Add indexes to foreign key columns in the `library` table (`book_fk_id` and `student_fk_id`) for improved performance on joins, especially as the database grows.
+- Consider adding more robust error handling, particularly around the subqueries used for inserts.  If a lookup fails, the insert might fail silently, which is not ideal.
+- The documentation could be enhanced by explicitly mentioning the specific JOIN types used (INNER JOIN, LEFT JOIN) in the SQL queries, aligning it better with the chapter's focus on different types of joins.
+Correctness: 95%
+-----
